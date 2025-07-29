@@ -1,178 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Angela Wafula | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Angela Wafula - CV</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f4f4f4;
+      background-color: #f5f5f5;
       color: #333;
     }
-    header {
-      background-color: #003366;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
+
     nav {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
       display: flex;
       justify-content: center;
-      background-color: #00509e;
-      padding: 10px 0;
     }
+
     nav a {
-      color: #fff;
-      text-decoration: none;
+      color: white;
       margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
     }
-    .section {
-      padding: 30px;
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      display: none;
+      padding: 2rem;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h1, h2, h3 {
+      color: #222;
+    }
+
+    .container {
       max-width: 900px;
       margin: auto;
-    }
-    .section h2 {
-      color: #003366;
-      margin-bottom: 15px;
-    }
-    .profile-pic {
-      width: 150px;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 20px;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-    .project, .lab {
-      margin-bottom: 20px;
-      padding: 15px;
-      background-color: #e9f1f7;
-      border-left: 5px solid #003366;
-    }
-    footer {
-      background-color: #003366;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
+      background: white;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Angela Wafula</h1>
-    <p>Ethical Hacker | Data Analyst | Cybersecurity Enthusiast</p>
-  </header>
 
   <nav>
-    <a href="#home">Home</a>
-    <a href="#resume">Resume</a>
-    <a href="#projects">Projects</a>
-    <a href="#labs">Lab Challenges</a>
-    <a href="#contact">Contact</a>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('projects')">Projects</a>
+    <a href="#" onclick="showSection('education')">Education</a>
+    <a href="#" onclick="showSection('skills')">Skills</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
   </nav>
 
-  <section id="home" class="section">
-    <img src="Angela.jpg" alt="Angela Wafula" class="profile-pic">
-    <h2>Welcome</h2>
-    <p>Welcome to my professional portfolio. I’m passionate about analyzing data, defending systems, and solving cyber challenges.</p>
-  </section>
+  <div class="container">
 
-  <section id="resume" class="section">
-    <h2>Resume</h2>
-    <h3>Education</h3>
-    <ul>
-      <li>BSc in Computer Security and Forensics, Jaramogi Oginga Odinga University</li>
-      <li>KCSE - St. Cecilia Girls High School, Grade B+</li>
-    </ul>
+    <section id="home" class="active">
+      <h1>Angela Wafula</h1>
+      <p>Data Analyst | Cybersecurity Enthusiast</p>
+      <p>Experienced in data exploration, machine learning, data visualization, and report generation using Python, Excel, Power BI, and SQL. Passionate about solving real-world problems using data-driven solutions and presenting them clearly to stakeholders.</p>
+    </section>
 
-    <h3>Experience</h3>
-    <ul>
-      <li><strong>Intern</strong>, State Department of Economic Planning (2023–2024)<br>
-        Improved data retrieval efficiency by 15% using SQL and Python. Built Tableau dashboards increasing operational efficiency by 20%. Automated data cleaning workflows and collaborated across departments to enhance reporting accuracy.</li>
-      <li><strong>ICT Intern</strong>, Konza City (2019–2020)<br>
-        Provided user support, maintained 98% system uptime, supported ERP implementation, and conducted end-user training sessions to boost adoption rates.</li>
-    </ul>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div>
+        <h3>Human Activity Recognition</h3>
+        <p>Used Python (Pandas, Seaborn) to analyze sensor data. Built ML model with Scikit-learn (92% accuracy). Improved with feature engineering.</p>
+      </div>
+      <div>
+        <h3>Impact of Climate Change on Crop Yields</h3>
+        <p>Analyzed climate and agricultural data. Developed model to predict yield fluctuations with 85% accuracy. Identified key weather variables.</p>
+      </div>
+      <div>
+        <h3>Heart Attack Risk Prediction</h3>
+        <p>Built logistic regression model with Scikit-learn. Achieved 88% accuracy. Reduced false positives by 12% through tuning.</p>
+      </div>
+      <div>
+        <h3>Bank Fraud Detection</h3>
+        <p>Created fraud detection model with Python. Achieved 95% precision. Improved recall by 15% through imbalance handling techniques.</p>
+      </div>
+    </section>
 
-    <h3>Certifications</h3>
-    <ul>
-      <li>Google Data Analytics Professional Certificate</li>
-      <li>Meta Data Analyst Professional Certificate</li>
-      <li>Advanced SQL for Data Science – Udemy</li>
-      <li>Ethical Hacking – Cyber Shujaa (2025)</li>
-    </ul>
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>BSc in Computer Security and Forensics</strong> - Jaramogi Oginga Odinga University</li>
+        <li><strong>KCSE:</strong> St. Cecilia Girls High School – Grade B+</li>
+      </ul>
+    </section>
 
-    <h3>Skills</h3>
-    <ul>
-      <li>Data Analysis, Machine Learning, Data Visualization</li>
-      <li>Tableau, Power BI, Excel, Google Data Studio</li>
-      <li>Cloud: AWS (basic)</li>
-      <li>Database Management, KPI Tracking, Report Writing</li>
-      <li>Cybersecurity Awareness, IT Support</li>
-    </ul>
-  </section>
+    <section id="skills">
+      <h2>Skills & Interests</h2>
+      <ul>
+        <li>Data Analysis & Visualization (Excel, Power BI, Matplotlib, Seaborn)</li>
+        <li>Machine Learning (Scikit-learn, pandas)</li>
+        <li>Statistical Analysis & Reporting</li>
+        <li>Critical Thinking & Problem Solving</li>
+        <li>Attention to Detail</li>
+        <li>Cybersecurity Principles</li>
+        <li>Team Collaboration & Communication</li>
+      </ul>
+    </section>
 
-  <section id="projects" class="section">
-    <h2>Projects</h2>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> angelawafula@email.com</p>
+      <p><strong>Phone:</strong> +254 712 345 678</p>
+      <p><strong>LinkedIn:</strong> linkedin.com/in/angelawafula</p>
+      <p><strong>GitHub:</strong> github.com/angelawafula</p>
+    </section>
 
-    <div class="project">
-      <h3>Human Activity Recognition</h3>
-      <p>Conducted exploratory data analysis using Python (Pandas, Seaborn) and developed a machine learning model with Scikit-learn to classify human activities based on sensor data, achieving 92% accuracy. Feature engineering improved performance by 10%.</p>
-    </div>
+  </div>
 
-    <div class="project">
-      <h3>Impact of Climate Change on Crop Yields</h3>
-      <p>Performed exploratory data analysis on climate and agricultural datasets using Pandas and Matplotlib. Built a predictive machine learning model to assess crop yield variations, achieving 85% accuracy. Identified key climate factors through feature selection.</p>
-    </div>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
 
-    <div class="project">
-      <h3>Heart Attack Risk Prediction</h3>
-      <p>Developed a logistic regression model in Scikit-learn to predict heart attack risks. Conducted data cleaning and feature selection, achieving 88% accuracy and reducing false positives by 12% through hyperparameter tuning.</p>
-    </div>
-
-    <div class="project">
-      <h3>Bank Fraud Detection</h3>
-      <p>Built a fraud detection model using machine learning techniques in Python. Achieved 95% precision in detecting fraudulent bank transactions. Employed data preprocessing and imbalance handling to boost model recall by 15%.</p>
-    </div>
-  </section>
-
-  <section id="labs" class="section">
-    <h2>Lab Challenges</h2>
-
-    <div class="lab">
-      <h3>Cyber Shujaa Challenge: Network Scanning</h3>
-      <p><strong>Problem:</strong> Identify active hosts on a network.</p>
-      <p><strong>Tools:</strong> Nmap, Zenmap</p>
-      <p><strong>Approach:</strong> Used SYN and UDP scans to discover open ports.</p>
-      <p><strong>Lessons:</strong> Gained practical understanding of network enumeration and service fingerprinting.</p>
-    </div>
-
-    <div class="lab">
-      <h3>Web Vulnerability Testing (Placeholder)</h3>
-      <p><strong>Problem:</strong> Detect OWASP Top 10 vulnerabilities in a sample app.</p>
-      <p><strong>Tools:</strong> Burp Suite, OWASP ZAP</p>
-      <p><strong>Approach:</strong> Manual and automated scanning to find and document flaws.</p>
-      <p><strong>Lessons:</strong> Understanding of input validation, session management, and reporting.</p>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:wafulaangelah@yahoo.com">wafulaangelah@yahoo.com</a></p>
-    <p>Phone: +254 722 624 649</p>
-    <p>
-      <a href="https://github.com/Angelah1994" target="_blank">GitHub</a> |
-      <a href="#">LinkedIn</a> |
-      <a href="https://www.hackerrank.com/" target="_blank">HackerRank</a>
-    </p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
-  </footer>
 </body>
 </html>
