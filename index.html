@@ -1,80 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Angela Wafula - Professional CV</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #34495e;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            display: inline-block;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #1abc9c;
-        }
-        section {
-            display: none;
-            padding: 20px;
-        }
-        section.active {
-            display: block;
-        }
-        .profile-pic {
-            width: 150px;
-            border-radius: 50%;
-            margin: 20px auto;
-            display: block;
-            border: 4px solid white;
-        }
-        h2 {
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Angela Wafula | Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #eef3f8;
+      color: #333;
+    }
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #00509e;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+    .section {
+      display: none;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section.active {
+      display: block;
+    }
+    .section h2 {
+      color: #003366;
+      margin-bottom: 15px;
+    }
+    .profile-pic {
+      width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .project, .lab {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #e9f1f7;
+      border-left: 5px solid #003366;
+    }
+    footer {
+      background-color: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+
+    window.onload = function () {
+      showSection('home'); // Show home by default
+    };
+  </script>
 </head>
 <body>
-
-<header>
-    <img src="your-photo.jpg" alt="Profile Photo" class="profile-pic">
+  <header>
     <h1>Angela Wafula</h1>
-    <p>Data Analyst | ICT Specialist | IT Support Officer</p>
-</header>
+    <p>Ethical Hacker | Data Analyst | Cybersecurity Enthusiast</p>
+  </header>
 
-<nav>
+  <nav>
     <a href="#" onclick="showSection('home')">Home</a>
-    <a href="#" onclick="showSection('experience')">Experience</a>
-    <a href="#" onclick="showSection('skills')">Skills</a>
+    <a href="#" onclick="showSection('resume')">Resume</a>
+    <a href="#" onclick="showSection('projects')">Projects</a>
+    <a href="#" onclick="showSection('labs')">Lab Challenges</a>
     <a href="#" onclick="showSection('contact')">Contact</a>
-</nav>
+  </nav>
 
-<main>
-    <section id="home" class="active">
-        <h2>Welcome</h2>
-        <p>Welcome to my professional CV website. I am a dedicated Data Analyst, ICT Spe
+  <section id="home" class="section active">
+    <img src="Angela.jpg" alt="Angela Wafula" class="profile-pic" />
+    <h2>Welcome</h2>
+    <p>Welcome to my professional portfolio. I’m passionate about data analytics, cybersecurity, and IT support. I thrive on transforming raw data into actionable insights and helping organizations stay secure and efficient through technology.</p>
+  </section>
+
+  <section id="resume" class="section">
+    <h2>Resume</h2>
+    <h3>Education</h3>
+    <ul>
+      <li>BSc in Computer Security and Forensics, Jaramogi Oginga Odinga University</li>
+      <li>KCSE - St. Cecilia Girls High School, Grade B+</li>
+    </ul>
+
+    <h3>Experience</h3>
+    <ul>
+      <li><strong>Intern</strong>, State Department of Economic Planning (2023–2024)<br>
+        Improved data retrieval efficiency by 15% using SQL and Python. Built Tableau dashboards increasing operational efficiency by 20%. Automated data cleaning workflows and collaborated across departments to enhance reporting accuracy.</li>
+
+      <li><strong>ICT Intern</strong>, Konza City (2019–2020)<br>
+        Provided user support, maintained 98% system uptime, supported ERP implementation, and conducted end-user training sessions to boost adoption rates.</li>
+
+      <li><strong>IT Support Officer</strong>, Freelance/Contract Projects<br>
+        Diagnosed and resolved hardware/software issues, installed operating systems, and assisted users with daily IT challenges. Configured workstations, printers, and routers while maintaining security protocols and ensuring data backup practices.</li>
+    </ul>
+
+    <h3>Certifications</h3>
+    <ul>
+      <li>Google Data Analytics Professional Certificate</li>
+      <li>Meta Data Analyst Professional Certificate</li>
+      <li>Advanced SQL for Data Science – Udemy</li>
+      <li>Ethical Hacking – Cyber Shujaa (2025)</li>
+    </ul>
+
+    <h3>Skills</h3>
+    <ul>
+      <li>Data Analysis, Machine Learning, Data Visualization</li>
+      <li>Tableau, Power BI, Excel, Google Data Studio</li>
+      <li>Cloud: AWS (basic)</li>
+      <li>Database Management, KPI Tracking, Report Writing</li>
+      <li>Cybersecurity Awareness, IT Support</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Human Activity Recognition</h3>
+      <p>Conducted exploratory data analysis using Python (Pandas, Seaborn) and developed a machine learning model with Scikit-learn to classify human activities based on sensor data, achieving 92% accuracy. Feature engineering improved performance by 10%.</p>
+    </div>
+
+    <div class="project">
+      <h3>Impact of Climate Change on Crop Yields</h3>
+      <p>Performed exploratory data analysis on climate and agricultural datasets using Pandas and Matplotlib. Built a predictive machine learning model to assess crop yield variations, achieving 85% accuracy. Identified key climate factors through feature selection.</p>
+    </div>
+
+    <div class="project">
+      <h3>Heart Attack Risk Prediction</h3>
+      <p>Developed a logistic regression model in Scikit-learn to predict heart attack risks. Conducted data cleaning and feature selection, achieving 88% accuracy and reducing false positives by 12% through hyperparameter tuning.</p>
+    </div>
+
+    <div class="project">
+      <h3>Bank Fraud Detection</h3>
+      <p>Built a fraud detection model using machine
