@@ -3,133 +3,159 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Angela Wafula - CV</title>
+  <title>Angela Wafula – CV</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f5f5f5;
-      color: #333;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
     }
 
     nav {
-      background-color: #333;
-      color: white;
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
+      background: #444;
+      padding: 0.5rem;
+      text-align: center;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
+      cursor: pointer;
     }
 
     section {
       display: none;
       padding: 2rem;
+      background: #fff;
+      margin: 20px;
+      border-radius: 10px;
     }
 
     section.active {
       display: block;
     }
 
-    h1, h2, h3 {
-      color: #222;
+    h2 {
+      color: #333;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.3rem;
     }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      padding: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 2rem;
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    .project, .experience-item {
+      margin-bottom: 1.5rem;
     }
   </style>
 </head>
+
 <body>
+  <header>
+    <h1>Angela Wafula</h1>
+    <p>Data Analyst | IT Support Officer</p>
+  </header>
 
   <nav>
-    <a href="#" onclick="showSection('home')">Home</a>
-    <a href="#" onclick="showSection('projects')">Projects</a>
-    <a href="#" onclick="showSection('education')">Education</a>
-    <a href="#" onclick="showSection('skills')">Skills</a>
-    <a href="#" onclick="showSection('contact')">Contact</a>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('skills')">Skills</a>
+    <a onclick="showSection('projects')">Projects</a>
+    <a onclick="showSection('contact')">Contact</a>
   </nav>
 
-  <div class="container">
+  <!-- Sections -->
+  <section id="home" class="active">
+    <h2>Welcome</h2>
+    <p>Hello! I'm Angela Wafula, a passionate and detail-oriented professional with a strong background in data analysis and IT support. Explore the sections above to learn more about me, my skills, and my work!</p>
+  </section>
 
-    <section id="home" class="active">
-      <h1>Angela Wafula</h1>
-      <p>Data Analyst | Cybersecurity Enthusiast</p>
-      <p>Experienced in data exploration, machine learning, data visualization, and report generation using Python, Excel, Power BI, and SQL. Passionate about solving real-world problems using data-driven solutions and presenting them clearly to stakeholders.</p>
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a versatile professional with a Bachelor's degree in Computer Security and Forensics. I have a solid background in data analysis and IT support, with hands-on experience in identifying system issues, analyzing data trends, and providing technical solutions that improve performance and user satisfaction.</p>
+    
+    <h3>Experience</h3>
+    <div class="experience-item">
+      <h4>IT Support Officer – Kisumu County Government</h4>
+      <p>Provided first-level technical support to end-users, managed hardware/software installations, performed routine maintenance, and ensured smooth operations of IT systems. Helped reduce downtime by 30% through proactive issue resolution and staff training on basic troubleshooting.</p>
+    </div>
+    
+    <h3>Education</h3>
+    <ul>
+      <li>BSc in Computer Security and Forensics, Jaramogi Oginga Odinga University</li>
+      <li>KCSE - St. Cecilia Girls High School, Grade B+</li>
+    </ul>
+  </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div>
-        <h3>Human Activity Recognition</h3>
-        <p>Used Python (Pandas, Seaborn) to analyze sensor data. Built ML model with Scikit-learn (92% accuracy). Improved with feature engineering.</p>
-      </div>
-      <div>
-        <h3>Impact of Climate Change on Crop Yields</h3>
-        <p>Analyzed climate and agricultural data. Developed model to predict yield fluctuations with 85% accuracy. Identified key weather variables.</p>
-      </div>
-      <div>
-        <h3>Heart Attack Risk Prediction</h3>
-        <p>Built logistic regression model with Scikit-learn. Achieved 88% accuracy. Reduced false positives by 12% through tuning.</p>
-      </div>
-      <div>
-        <h3>Bank Fraud Detection</h3>
-        <p>Created fraud detection model with Python. Achieved 95% precision. Improved recall by 15% through imbalance handling techniques.</p>
-      </div>
-    </section>
+  <section id="skills">
+    <h2>Skills & Interests</h2>
+    <ul>
+      <li>Data Analysis & Reporting</li>
+      <li>IT Support & Troubleshooting</li>
+      <li>Problem Solving & Critical Thinking</li>
+      <li>Attention to Detail</li>
+      <li>Team Collaboration</li>
+      <li>Microsoft Office Suite (Excel, Word, PowerPoint)</li>
+      <li>Data Visualization (Tableau, Power BI)</li>
+      <li>Networking Fundamentals</li>
+    </ul>
+  </section>
 
-    <section id="education">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>BSc in Computer Security and Forensics</strong> - Jaramogi Oginga Odinga University</li>
-        <li><strong>KCSE:</strong> St. Cecilia Girls High School – Grade B+</li>
-      </ul>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
 
-    <section id="skills">
-      <h2>Skills & Interests</h2>
-      <ul>
-        <li>Data Analysis & Visualization (Excel, Power BI, Matplotlib, Seaborn)</li>
-        <li>Machine Learning (Scikit-learn, pandas)</li>
-        <li>Statistical Analysis & Reporting</li>
-        <li>Critical Thinking & Problem Solving</li>
-        <li>Attention to Detail</li>
-        <li>Cybersecurity Principles</li>
-        <li>Team Collaboration & Communication</li>
-      </ul>
-    </section>
+    <div class="project">
+      <h3>Human Activity Recognition</h3>
+      <p>Conducted EDA using Pandas and Seaborn; developed a classification model in Scikit-learn to predict human activity using sensor data with 92% accuracy after feature engineering and tuning.</p>
+    </div>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> angelawafula@email.com</p>
-      <p><strong>Phone:</strong> +254 712 345 678</p>
-      <p><strong>LinkedIn:</strong> linkedin.com/in/angelawafula</p>
-      <p><strong>GitHub:</strong> github.com/angelawafula</p>
-    </section>
+    <div class="project">
+      <h3>Impact of Climate Change on Crop Yields</h3>
+      <p>Analyzed climate and agricultural datasets to identify key factors affecting crop yields. Built a predictive model achieving 85% accuracy. Presented insights using Matplotlib and Seaborn.</p>
+    </div>
 
-  </div>
+    <div class="project">
+      <h3>Heart Attack Risk Prediction</h3>
+      <p>Developed a logistic regression model to predict heart attack risks with 88% accuracy. Conducted preprocessing and feature selection, improving model performance and reducing false positives.</p>
+    </div>
+
+    <div class="project">
+      <h3>Bank Fraud Detection</h3>
+      <p>Implemented a fraud detection model using machine learning. Achieved 95% precision by handling class imbalance and optimizing recall. Conducted feature analysis and model evaluation.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <ul>
+      <li>Email: angelwafula@email.com</li>
+      <li>Phone: +254 700 000 000</li>
+      <li>LinkedIn: <a href="https://linkedin.com/in/angelawafula" target="_blank">linkedin.com/in/angelawafula</a></li>
+      <li>Location: Kisumu, Kenya</li>
+    </ul>
+  </section>
 
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll("section");
-      sections.forEach(section => section.classList.remove("active"));
+      sections.forEach(section => {
+        section.classList.remove("active");
+      });
       document.getElementById(id).classList.add("active");
     }
   </script>
-
 </body>
 </html>
