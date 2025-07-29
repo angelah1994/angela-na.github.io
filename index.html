@@ -1,140 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Angela Wafula - Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f6f8;
-      color: #333;
+      background-color: #f4f4f4;
     }
     header {
-      background-color: #003366;
+      background-color: #34495e;
       color: white;
-      padding: 2rem 1rem;
+      padding: 20px;
       text-align: center;
     }
-    header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-top: 1rem;
-    }
     nav {
-      background-color: #002244;
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
+      background-color: #2c3e50;
+      overflow: hidden;
     }
     nav a {
+      float: left;
+      display: block;
       color: white;
+      text-align: center;
+      padding: 14px 16px;
       text-decoration: none;
     }
+    nav a:hover {
+      background-color: #1abc9c;
+    }
     section {
+      padding: 20px;
       display: none;
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
     }
     section.active {
       display: block;
     }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
-    }
     footer {
-      background-color: #003366;
+      background-color: #34495e;
       color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
-    .social-icons a {
-      margin: 0 10px;
-      color: white;
-      text-decoration: none;
+    img.profile {
+      max-width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Angela Wafula</h1>
-    <p>IT Support Officer | Customer-Focused | Problem Solver</p>
-    <img src="Angela.jpg" alt="Angela Wafula">
+    <p>IT Support Officer</p>
+    <img src="Angela.jpg" alt="Angela Wafula" class="profile">
   </header>
+
   <nav>
-    <a href="#about" onclick="showSection('about')">About</a>
-    <a href="#skills" onclick="showSection('skills')">Skills</a>
-    <a href="#experience" onclick="showSection('experience')">Experience</a>
-    <a href="#education" onclick="showSection('education')">Education</a>
-    <a href="#contact" onclick="showSection('contact')">Contact</a>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('projects')">Projects</a>
+    <a href="#" onclick="showPage('lab')">Lab Challenges</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
   </nav>
 
-  <section id="about" class="active">
-    <h2>About Me</h2>
-    <p>I am a dedicated IT Support Officer with a strong background in troubleshooting, user training, and technical support. I excel in delivering efficient IT solutions, maintaining systems, and ensuring smooth technology operations in fast-paced environments. I’m passionate about technology and thrive on helping teams work seamlessly through effective IT support.</p>
+  <section id="home" class="active">
+    <h2>Welcome to My Portfolio</h2>
+    <p>I am a dedicated IT Support Officer with experience in providing technical assistance, troubleshooting hardware and software issues, and ensuring seamless IT operations. I am passionate about helping teams function efficiently with the right technological support.</p>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
+  <section id="projects">
+    <h2>Projects</h2>
     <ul>
-      <li>IT Support & Troubleshooting</li>
-      <li>Networking & System Maintenance</li>
-      <li>Technical Documentation</li>
-      <li>Customer Service</li>
-      <li>Team Collaboration</li>
-      <li>Time Management</li>
-      <li>Adaptability & Problem Solving</li>
+      <li><strong>Project A:</strong> Developed a data backup solution to enhance data recovery processes.</li>
+      <li><strong>Project B:</strong> Led a Windows deployment project across 200+ computers with zero downtime.</li>
+      <li><strong>Project C:</strong> Implemented IT inventory system to track and manage hardware assets.</li>
     </ul>
   </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <h3>IT Support Officer</h3>
-    <p><strong>XYZ Company</strong> | Nairobi, Kenya</p>
-    <p>June 2022 – Present</p>
+  <section id="lab">
+    <h2>Lab Challenges</h2>
     <ul>
-      <li>Provided technical support to over 200 users in a busy office environment.</li>
-      <li>Maintained, configured, and updated hardware and software systems.</li>
-      <li>Trained staff on using digital systems and resolved technical issues efficiently.</li>
+      <li>Completed network penetration tests using Kali Linux.</li>
+      <li>Simulated phishing attacks and documented prevention strategies.</li>
+      <li>Configured virtual machines for isolated malware analysis.</li>
     </ul>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <p><strong>Bachelor of Science in Information Technology</strong></p>
-    <p>JKUAT University, Kenya</p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:wafulaangelah@yahoo.com">wafulaangelah@yahoo.com</a></p>
+    <p>Email: wafulaangelah@yahoo.com</p>
     <p>Phone: 0722624649</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/angelawafula">linkedin.com/in/angelawafula</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-      <a href="mailto:wafulaangelah@yahoo.com">Email</a>
-    </div>
+    <p>Connect with me: 
+      <a href="https://twitter.com" target="_blank" style="color:white;">Twitter</a> | 
+      <a href="https://www.linkedin.com/in/angelawafula" target="_blank" style="color:white;">LinkedIn</a> | 
+      <a href="mailto:wafulaangelah@yahoo.com" style="color:white;">Email</a>
+    </p>
   </footer>
 
   <script>
-    function showSection(id) {
-      document.querySelectorAll('section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(id).classList.add('active');
+    function showPage(pageId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
     }
   </script>
 </body>
