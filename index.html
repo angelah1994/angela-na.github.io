@@ -3,158 +3,165 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Angela Wafula | Portfolio</title>
+  <title>Angela Wafula | CV</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f1f4f6;
       margin: 0;
-      background-color: #eef3f8;
-      color: #333;
+      padding: 0;
     }
+
     header {
-      background-color: #003366;
-      color: #fff;
-      padding: 20px;
+      background-color: #2c3e50;
+      color: white;
+      padding: 30px 20px;
       text-align: center;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #00509e;
-      padding: 10px 0;
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 15px;
     }
+
+    nav {
+      background-color: #34495e;
+      padding: 10px;
+      text-align: center;
+    }
+
     nav a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       margin: 0 15px;
+      font-weight: bold;
     }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     .section {
-      display: none;
-      padding: 30px;
+      padding: 40px 20px;
       max-width: 900px;
       margin: auto;
     }
-    .section.active {
-      display: block;
-    }
-    .section h2 {
-      color: #003366;
-      margin-bottom: 15px;
-    }
-    .profile-pic {
-      width: 150px;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 20px;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-    .project, .lab {
-      margin-bottom: 20px;
-      padding: 15px;
-      background-color: #e9f1f7;
-      border-left: 5px solid #003366;
-    }
-    footer {
-      background-color: #003366;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-    }
-  </style>
-  <script>
-    function showSection(id) {
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(id).classList.add('active');
+
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      color: #2c3e50;
     }
 
-    window.onload = function () {
-      showSection('home'); // Show home by default
-    };
-  </script>
+    .job, .project, .lab {
+      margin-bottom: 20px;
+      background: white;
+      padding: 20px;
+      border-left: 5px solid #3498db;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    a {
+      color: #3498db;
+    }
+  </style>
 </head>
 <body>
+
   <header>
+    <img src="Angela.jpg" alt="Angela Wafula">
     <h1>Angela Wafula</h1>
-    <p>Ethical Hacker | Data Analyst | Cybersecurity Enthusiast</p>
+    <p>IT Support Officer | Data Analyst | Cybersecurity Trainee</p>
   </header>
 
   <nav>
-    <a href="#" onclick="showSection('home')">Home</a>
-    <a href="#" onclick="showSection('resume')">Resume</a>
-    <a href="#" onclick="showSection('projects')">Projects</a>
-    <a href="#" onclick="showSection('labs')">Lab Challenges</a>
-    <a href="#" onclick="showSection('contact')">Contact</a>
+    <a href="#summary">Home</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#labs">Lab Challenges</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <section id="home" class="section active">
-    <img src="Angela.jpg" alt="Angela Wafula" class="profile-pic" />
-    <h2>Welcome</h2>
-    <p>Welcome to my professional portfolio. I’m passionate about data analytics, cybersecurity, and IT support. I thrive on transforming raw data into actionable insights and helping organizations stay secure and efficient through technology.</p>
+  <section id="summary" class="section">
+    <h2>Professional Summary</h2>
+    <p>Experienced IT Support Officer with a strong foundation in data analysis and cybersecurity. Adept at resolving technical issues, optimizing system performance, and supporting end-users with software and hardware troubleshooting. Currently expanding skill set in cyber defense, vulnerability assessment, and ethical hacking through hands-on labs and projects. Enthusiastic about leveraging IT and analytical skills to improve operational efficiency and data-driven decision-making in organizations.</p>
   </section>
 
-  <section id="resume" class="section">
-    <h2>Resume</h2>
-    <h3>Education</h3>
-    <ul>
-      <li>BSc in Computer Security and Forensics, Jaramogi Oginga Odinga University</li>
-      <li>KCSE - St. Cecilia Girls High School, Grade B+</li>
-    </ul>
+  <section id="experience" class="section">
+    <h2>Work Experience</h2>
 
-    <h3>Experience</h3>
-    <ul>
-      <li><strong>Intern</strong>, State Department of Economic Planning (2023–2024)<br>
-        Improved data retrieval efficiency by 15% using SQL and Python. Built Tableau dashboards increasing operational efficiency by 20%. Automated data cleaning workflows and collaborated across departments to enhance reporting accuracy.</li>
-
-      <li><strong>ICT Intern</strong>, Konza City (2019–2020)<br>
-        Provided user support, maintained 98% system uptime, supported ERP implementation, and conducted end-user training sessions to boost adoption rates.</li>
-
-      <li><strong>IT Support Officer</strong>, Freelance/Contract Projects<br>
-        Diagnosed and resolved hardware/software issues, installed operating systems, and assisted users with daily IT challenges. Configured workstations, printers, and routers while maintaining security protocols and ensuring data backup practices.</li>
-    </ul>
-
-    <h3>Certifications</h3>
-    <ul>
-      <li>Google Data Analytics Professional Certificate</li>
-      <li>Meta Data Analyst Professional Certificate</li>
-      <li>Advanced SQL for Data Science – Udemy</li>
-      <li>Ethical Hacking – Cyber Shujaa (2025)</li>
-    </ul>
-
-    <h3>Skills</h3>
-    <ul>
-      <li>Data Analysis, Machine Learning, Data Visualization</li>
-      <li>Tableau, Power BI, Excel, Google Data Studio</li>
-      <li>Cloud: AWS (basic)</li>
-      <li>Database Management, KPI Tracking, Report Writing</li>
-      <li>Cybersecurity Awareness, IT Support</li>
-    </ul>
+    <div class="job">
+      <h3>IT Support Officer</h3>
+      <p><strong>Company:</strong> Ministry of Agriculture</p>
+      <p><strong>Duration:</strong> 2020 – Present</p>
+      <p><strong>Key Responsibilities:</strong></p>
+      <ul>
+        <li>Provided first-level technical support for over 200 employees, troubleshooting hardware, software, and network issues.</li>
+        <li>Managed user accounts and access controls in Active Directory and MS Exchange.</li>
+        <li>Assisted with system upgrades, security patching, and backup processes.</li>
+        <li>Trained users on Microsoft Office Suite, email systems, and cybersecurity best practices.</li>
+      </ul>
+    </div>
   </section>
 
   <section id="projects" class="section">
     <h2>Projects</h2>
 
     <div class="project">
-      <h3>Human Activity Recognition</h3>
-      <p>Conducted exploratory data analysis using Python (Pandas, Seaborn) and developed a machine learning model with Scikit-learn to classify human activities based on sensor data, achieving 92% accuracy. Feature engineering improved performance by 10%.</p>
-    </div>
-
-    <div class="project">
-      <h3>Impact of Climate Change on Crop Yields</h3>
-      <p>Performed exploratory data analysis on climate and agricultural datasets using Pandas and Matplotlib. Built a predictive machine learning model to assess crop yield variations, achieving 85% accuracy. Identified key climate factors through feature selection.</p>
-    </div>
-
-    <div class="project">
-      <h3>Heart Attack Risk Prediction</h3>
-      <p>Developed a logistic regression model in Scikit-learn to predict heart attack risks. Conducted data cleaning and feature selection, achieving 88% accuracy and reducing false positives by 12% through hyperparameter tuning.</p>
+      <h3>Customer Retention Analysis</h3>
+      <p>Analyzed customer churn patterns using Python and Power BI to develop dashboards for visualizing customer retention KPIs. Identified key churn drivers and improved retention prediction accuracy by 20%.</p>
     </div>
 
     <div class="project">
       <h3>Bank Fraud Detection</h3>
-      <p>Built a fraud detection model using machine
+      <p>Built a fraud detection model using machine learning techniques. Achieved 95% precision in detecting fraudulent transactions. Implemented SMOTE to handle imbalanced datasets and improved recall by 15%.</p>
+    </div>
+  </section>
+
+  <section id="labs" class="section">
+    <h2>Lab Challenges</h2>
+
+    <div class="lab">
+      <h3>Network Scanning - Cyber Shujaa Lab</h3>
+      <p><strong>Tools:</strong> Nmap, Zenmap</p>
+      <p><strong>Task:</strong> Identify live hosts and open ports within a subnet.</p>
+      <p><strong>Outcome:</strong> Successfully discovered vulnerable services and practiced enumeration techniques.</p>
+    </div>
+
+    <div class="lab">
+      <h3>Web Vulnerability Assessment</h3>
+      <p><strong>Tools:</strong> OWASP ZAP, Burp Suite</p>
+      <p><strong>Task:</strong> Find common web application flaws such as XSS and SQL Injection.</p>
+      <p><strong>Outcome:</strong> Improved understanding of web application security by manually exploiting vulnerabilities and generating reports.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:wafulaangelah@yahoo.com">wafulaangelah@yahoo.com</a></p>
+    <p>Phone: +254 722 624 649</p>
+    <p>
+      <a href="https://github.com/Angelah1994" target="_blank">GitHub</a> |
+      <a href="#">LinkedIn</a> |
+      <a href="https://www.hackerrank.com/" target="_blank">HackerRank</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
