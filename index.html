@@ -37,9 +37,13 @@
       text-decoration: none;
     }
     section {
+      display: none;
       padding: 2rem;
       max-width: 900px;
       margin: auto;
+    }
+    section.active {
+      display: block;
     }
     h2 {
       border-bottom: 2px solid #ccc;
@@ -52,6 +56,11 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -61,14 +70,14 @@
     <img src="Angela.jpg" alt="Angela Wafula">
   </header>
   <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" onclick="showSection('about')">About</a>
+    <a href="#skills" onclick="showSection('skills')">Skills</a>
+    <a href="#experience" onclick="showSection('experience')">Experience</a>
+    <a href="#education" onclick="showSection('education')">Education</a>
+    <a href="#contact" onclick="showSection('contact')">Contact</a>
   </nav>
 
-  <section id="about">
+  <section id="about" class="active">
     <h2>About Me</h2>
     <p>I am a dedicated IT Support Officer with a strong background in troubleshooting, user training, and technical support. I excel in delivering efficient IT solutions, maintaining systems, and ensuring smooth technology operations in fast-paced environments. I’m passionate about technology and thrive on helping teams work seamlessly through effective IT support.</p>
   </section>
@@ -113,6 +122,20 @@
 
   <footer>
     <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      <a href="mailto:wafulaangelah@yahoo.com">Email</a>
+    </div>
   </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
