@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #eef3f8;
+  color: #333;
+}
+header {
+  background-color: #003366;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #00509e;
+  padding: 10px 0;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+.section {
+  display: none;
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+.section.active {
+  display: block;
+}
+.section h2 {
+  color: #003366;
+  margin-bottom: 15px;
+}
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.project, .lab {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #e9f1f7;
+  border-left: 5px solid #003366;
+}
+footer {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
