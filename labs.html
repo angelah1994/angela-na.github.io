@@ -59,10 +59,10 @@
     nav.site-nav a.active {
       color: #ffd600;
     }
-    /* Section styles for lab content */
+    /* Main content */
     main {
       flex: 1 0 auto;
-      max-width: 960px;
+      max-width: 1080px;
       margin: 30px auto 40px;
       background: white;
       padding: 30px 40px;
@@ -73,14 +73,30 @@
       color: #003366;
       margin-bottom: 20px;
       font-size: 2rem;
+      text-align: center;
     }
     main p.intro {
       margin-bottom: 30px;
       font-size: 1.1rem;
       line-height: 1.6;
+      text-align: center;
+    }
+    /* Container for side-by-side challenge cards */
+    .challenge-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
     }
     article.challenge {
-      margin-bottom: 40px;
+      flex: 1 1 calc(50% - 30px); /* roughly two per row */
+      background: #fafafa;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
     }
     article.challenge h3 {
       color: #00509e;
@@ -90,14 +106,16 @@
     article.challenge p {
       margin: 0.3em 0 0.8em 0;
       line-height: 1.5;
+      flex-grow: 0;
     }
     article.challenge ul {
       list-style-type: disc;
       padding-left: 20px;
       margin-top: 0;
       color: #444;
+      flex-grow: 1;
     }
-    /* Footer fixed at bottom if content is less */
+    /* Footer */
     footer.site-footer {
       flex-shrink: 0;
       background: black;
@@ -107,7 +125,14 @@
       font-size: 0.9rem;
     }
     /* Responsive adjustments */
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
+      article.challenge {
+        flex: 1 1 100%; /* stack on smaller screens */
+      }
+      main {
+        padding: 20px;
+        max-width: 90%;
+      }
       header.site-header {
         flex-direction: column;
         align-items: flex-start;
@@ -137,116 +162,108 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-
   <main>
     <h2>Lab Challenges</h2>
     <p class="intro">Hands-on cybersecurity challenges demonstrating practical skills in various security domains.</p>
-
-    <article class="challenge">
-      <h3>Web Application SQL Injection (Web Security)</h3>
-      <p><strong>Problem Statement:</strong> A vulnerable web application with a login form was susceptible to SQL injection. The task was to bypass authentication and retrieve sensitive data.</p>
-      <p><strong>Approach:</strong> Tested manually with payloads, confirmed vulnerability, then automated extraction with SQLmap.</p>
-      <p><strong>Tools Used:</strong> Burp Suite, SQLmap, Browser DevTools</p>
-      <p><strong>Key Lessons:</strong></p>
-      <ul>
-        <li>Importance of parameterized queries in web applications</li>
-        <li>Manual and automated SQL injection testing</li>
-        <li>Secure coding practices to mitigate SQLi</li>
-      </ul>
-    </article>
-
-    <article class="challenge">
-      <h3>Network Traffic Analysis (Network Security)</h3>
-      <p><strong>Problem Statement:</strong> Analyzed a suspicious PCAP file to detect malicious traffic and exfiltrated data.</p>
-      <p><strong>Approach:</strong> Inspected packets in Wireshark, detected DNS tunneling, and extracted hidden payloads.</p>
-      <p><strong>Tools Used:</strong> Wireshark, Tshark, Python scripts</p>
-      <p><strong>Key Lessons:</strong></p>
-      <ul>
-        <li>Normal vs. abnormal network patterns</li>
-        <li>DNS-based data exfiltration techniques</li>
-        <li>Importance of continuous monitoring</li>
-      </ul>
-    </article>
-
-    <article class="challenge">
-      <h3>Reverse Engineering CrackMe (Binary Exploitation)</h3>
-      <p><strong>Problem Statement:</strong> A binary executable required a secret password to unlock functionality.</p>
-      <p><strong>Approach:</strong> Decompiled binary in Ghidra, traced validation logic, retrieved correct password.</p>
-      <p><strong>Tools Used:</strong> Ghidra, GDB, Radare2</p>
-      <p><strong>Key Lessons:</strong></p>
-      <ul>
-        <li>Fundamentals of reverse engineering</li>
-        <li>Debugging binaries for logic flow</li>
-        <li>Risks of hardcoding credentials</li>
-      </ul>
-    </article>
-
-    <article class="challenge">
-      <h3>Privilege Escalation (Linux) (System Security)</h3>
-      <p><strong>Problem Statement:</strong> Gained low-privileged shell on a vulnerable machine but required root access.</p>
-      <p><strong>Approach:</strong> Enumerated SUID binaries, leveraged misconfigured scripts to escalate privileges.</p>
-      <p><strong>Tools Used:</strong> LinPEAS, GTFOBins, Linux commands</p>
-      <p><strong>Key Lessons:</strong></p>
-      <ul>
-        <li>Privilege escalation vectors on Linux</li>
-        <li>Importance of patching misconfigurations</li>
-        <li>Realistic attacker post-exploitation tactics</li>
-      </ul>
-    </article>
-
-    <article class="challenge">
-      <h3>Malware Analysis Lab (Malware & Threat Analysis)</h3>
-      <p><strong>Problem Statement:</strong> Analyzed a suspicious Windows executable suspected to be malware.</p>
-      <p><strong>Approach:</strong> Performed static analysis with strings and PE tools, followed by sandbox execution to observe behavior.</p>
-      <p><strong>Tools Used:</strong> Strings, PEStudio, Any.Run Sandbox</p>
-      <p><strong>Key Lessons:</strong></p>
-      <ul>
-        <li>Extracting IOCs from malware samples</li>
-        <li>Difference between static and dynamic analysis</li>
-        <li>Importance of sandbox environments for safety</li>
-      </ul>
-    </article>
-
-    <article class="challenge">
-      <h3>Brute Force & Password Cracking (Offensive Security)</h3>
-      <p><strong>Problem Statement:</strong> Faced a weakly protected login portal requiring password discovery.</p>
-      <p><strong>Approach:</strong> Captured login requests, then used Hydra and JohnTheRipper to brute force weak credentials.</p>
-      <p><strong>Tools Used:</strong> Hydra, JohnTheRipper, Burp Suite</p>
-      <p><strong>Key Lessons:</strong></p>
-      <ul>
-        <li>Risks of weak password policies</li>
-        <li>Rate limiting and lockout mechanisms</li>
-        <li>Strong password management strategies</li>
-      </ul>
-    </article>
-
-    <article class="challenge">
-      <h3>Incident Response Simulation (Blue Teaming)</h3>
-      <p><strong>Problem Statement:</strong> Investigated a simulated attack on a corporate network environment.</p>
-      <p><strong>Approach:</strong> Reviewed Splunk SIEM alerts, traced malicious activity, contained affected endpoints.</p>
-      <p><strong>Tools Used:</strong> Splunk, Sysinternals Suite, Event Logs</p>
-      <p><strong>Key Lessons:</strong></p>
-      <ul>
-        <li>Incident detection and triage</li>
-        <li>Log correlation for threat hunting</li>
-        <li>Responding quickly to limit damage</li>
-      </ul>
-    </article>
-
-    <article class="challenge">
-      <h3>Threat Intelligence & Hunting (Threat Intelligence)</h3>
-      <p><strong>Problem Statement:</strong> Tasked with investigating a targeted phishing campaign and mapping attacker TTPs.</p>
-      <p><strong>Approach:</strong> Collected OSINT data, extracted IOCs from email headers, cross-referenced with VirusTotal and MITRE ATT&CK, and developed a threat profile.</p>
-      <p><strong>Tools Used:</strong> OSINT Framework, VirusTotal, MISP, MITRE ATT&CK Navigator</p>
-      <p><strong>Key Lessons:</strong></p>
-      <ul>
-        <li>How to extract actionable intelligence from raw indicators</li>
-        <li>Correlating attacker behaviors with MITRE ATT&CK techniques</li>
-        <li>Importance of proactive threat hunting to reduce dwell time</li>
-      </ul>
-    </article>
+    <div class="challenge-container">
+      <article class="challenge">
+        <h3>Web Application SQL Injection (Web Security)</h3>
+        <p><strong>Problem Statement:</strong> A vulnerable web application with a login form was susceptible to SQL injection. The task was to bypass authentication and retrieve sensitive data.</p>
+        <p><strong>Approach:</strong> Tested manually with payloads, confirmed vulnerability, then automated extraction with SQLmap.</p>
+        <p><strong>Tools Used:</strong> Burp Suite, SQLmap, Browser DevTools</p>
+        <p><strong>Key Lessons:</strong></p>
+        <ul>
+          <li>Importance of parameterized queries in web applications</li>
+          <li>Manual and automated SQL injection testing</li>
+          <li>Secure coding practices to mitigate SQLi</li>
+        </ul>
+      </article>
+      <article class="challenge">
+        <h3>Network Traffic Analysis (Network Security)</h3>
+        <p><strong>Problem Statement:</strong> Analyzed a suspicious PCAP file to detect malicious traffic and exfiltrated data.</p>
+        <p><strong>Approach:</strong> Inspected packets in Wireshark, detected DNS tunneling, and extracted hidden payloads.</p>
+        <p><strong>Tools Used:</strong> Wireshark, Tshark, Python scripts</p>
+        <p><strong>Key Lessons:</strong></p>
+        <ul>
+          <li>Normal vs. abnormal network patterns</li>
+          <li>DNS-based data exfiltration techniques</li>
+          <li>Importance of continuous monitoring</li>
+        </ul>
+      </article>
+      <article class="challenge">
+        <h3>Reverse Engineering CrackMe (Binary Exploitation)</h3>
+        <p><strong>Problem Statement:</strong> A binary executable required a secret password to unlock functionality.</p>
+        <p><strong>Approach:</strong> Decompiled binary in Ghidra, traced validation logic, retrieved correct password.</p>
+        <p><strong>Tools Used:</strong> Ghidra, GDB, Radare2</p>
+        <p><strong>Key Lessons:</strong></p>
+        <ul>
+          <li>Fundamentals of reverse engineering</li>
+          <li>Debugging binaries for logic flow</li>
+          <li>Risks of hardcoding credentials</li>
+        </ul>
+      </article>
+      <article class="challenge">
+        <h3>Privilege Escalation (Linux) (System Security)</h3>
+        <p><strong>Problem Statement:</strong> Gained low-privileged shell on a vulnerable machine but required root access.</p>
+        <p><strong>Approach:</strong> Enumerated SUID binaries, leveraged misconfigured scripts to escalate privileges.</p>
+        <p><strong>Tools Used:</strong> LinPEAS, GTFOBins, Linux commands</p>
+        <p><strong>Key Lessons:</strong></p>
+        <ul>
+          <li>Privilege escalation vectors on Linux</li>
+          <li>Importance of patching misconfigurations</li>
+          <li>Realistic attacker post-exploitation tactics</li>
+        </ul>
+      </article>
+      <article class="challenge">
+        <h3>Malware Analysis Lab (Malware & Threat Analysis)</h3>
+        <p><strong>Problem Statement:</strong> Analyzed a suspicious Windows executable suspected to be malware.</p>
+        <p><strong>Approach:</strong> Performed static analysis with strings and PE tools, followed by sandbox execution to observe behavior.</p>
+        <p><strong>Tools Used:</strong> Strings, PEStudio, Any.Run Sandbox</p>
+        <p><strong>Key Lessons:</strong></p>
+        <ul>
+          <li>Extracting IOCs from malware samples</li>
+          <li>Difference between static and dynamic analysis</li>
+          <li>Importance of sandbox environments for safety</li>
+        </ul>
+      </article>
+      <article class="challenge">
+        <h3>Brute Force & Password Cracking (Offensive Security)</h3>
+        <p><strong>Problem Statement:</strong> Faced a weakly protected login portal requiring password discovery.</p>
+        <p><strong>Approach:</strong> Captured login requests, then used Hydra and JohnTheRipper to brute force weak credentials.</p>
+        <p><strong>Tools Used:</strong> Hydra, JohnTheRipper, Burp Suite</p>
+        <p><strong>Key Lessons:</strong></p>
+        <ul>
+          <li>Risks of weak password policies</li>
+          <li>Rate limiting and lockout mechanisms</li>
+          <li>Strong password management strategies</li>
+        </ul>
+      </article>
+      <article class="challenge">
+        <h3>Incident Response Simulation (Blue Teaming)</h3>
+        <p><strong>Problem Statement:</strong> Investigated a simulated attack on a corporate network environment.</p>
+        <p><strong>Approach:</strong> Reviewed Splunk SIEM alerts, traced malicious activity, contained affected endpoints.</p>
+        <p><strong>Tools Used:</strong> Splunk, Sysinternals Suite, Event Logs</p>
+        <p><strong>Key Lessons:</strong></p>
+        <ul>
+          <li>Incident detection and triage</li>
+          <li>Log correlation for threat hunting</li>
+          <li>Responding quickly to limit damage</li>
+        </ul>
+      </article>
+      <article class="challenge">
+        <h3>Threat Intelligence & Hunting (Threat Intelligence)</h3>
+        <p><strong>Problem Statement:</strong> Tasked with investigating a targeted phishing campaign and mapping attacker TTPs.</p>
+        <p><strong>Approach:</strong> Collected OSINT data, extracted IOCs from email headers, cross-referenced with VirusTotal and MITRE ATT&CK, and developed a threat profile.</p>
+        <p><strong>Tools Used:</strong> OSINT Framework, VirusTotal, MISP, MITRE ATT&CK Navigator</p>
+        <p><strong>Key Lessons:</strong></p>
+        <ul>
+          <li>How to extract actionable intelligence from raw indicators</li>
+          <li>Correlating attacker behaviors with MITRE ATT&CK techniques</li>
+          <li>Importance of proactive threat hunting to reduce dwell time</li>
+        </ul>
+      </article>
+    </div>
   </main>
-
   <footer class="site-footer">
     <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
   </footer>
