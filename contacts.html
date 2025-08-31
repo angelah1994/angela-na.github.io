@@ -4,35 +4,178 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Angela Wafula</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Header & Nav */
+    header.site-header {
+      background-color: black;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    header.site-header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
+    header.site-header p {
+      font-weight: 300;
+      font-size: 1.1rem;
+    }
+    nav.site-nav {
+      background-color: black;
+      display: flex;
+      justify-content: flex-start;
+      gap: 25px;
+      padding: 10px 40px;
+    }
+    nav.site-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 15px;
+      transition: color 0.3s ease;
+    }
+    nav.site-nav a:hover,
+    nav.site-nav a.active {
+      color: #ffd600;
+    }
+    /* Main section with form */
+    main {
+      flex: 1 0 auto;
+      max-width: 600px;
+      margin: 40px auto 60px;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+    main h2 {
+      color: #003366;
+      font-size: 2rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    form.contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    form.contact-form label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+      color: #333;
+    }
+    form.contact-form input[type="text"],
+    form.contact-form input[type="email"],
+    form.contact-form textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: Arial, sans-serif;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+    form.contact-form input[type="text"]:focus,
+    form.contact-form input[type="email"]:focus,
+    form.contact-form textarea:focus {
+      border-color: #003366;
+      outline: none;
+    }
+    form.contact-form textarea {
+      min-height: 120px;
+    }
+    form.contact-form button {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form.contact-form button:hover {
+      background-color: #ffd600;
+      color: black;
+    }
+    /* Footer */
+    footer.site-footer {
+      flex-shrink: 0;
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 18px 40px;
+      font-size: 0.9rem;
+    }
+    /* Responsive */
+    @media (max-width: 650px) {
+      main {
+        margin: 20px 15px 40px;
+        padding: 30px 20px;
+        max-width: 100%;
+      }
+      nav.site-nav {
+        gap: 15px;
+        padding: 10px 20px;
+      }
+      nav.site-nav a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <h1>Angela Wafula</h1>
     <p>ICT Officer | Certified Ethical Hacker</p>
   </header>
-
-  <nav>
+  <nav class="site-nav">
     <a href="index.html">Home</a>
     <a href="resume.html">Resume</a>
     <a href="labs.html">Lab Challenges</a>
-    <a href="contacts.html">Get in Touch</a>
+    <a href="contacts.html" class="active">Get in Touch</a>
   </nav>
-
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:wafulaangelah@yahoo.com">wafulaangelah@yahoo.com</a></p>
-    <p>Phone: +254 722 624 649</p>
-    <p>
-      <a href="https://github.com/Angelah1994" target="_blank">GitHub</a> |
-      <a href="#">LinkedIn</a>
-    </p>
-  </section>
-
-  <footer>
+  <main>
+    <h2>Contact Me</h2>
+    <form class="contact-form" action="mailto:wafulaangelah@yahoo.com" method="post" enctype="text/plain">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+      
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Your email address" required />
+      
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="Subject of your message" required />
+      
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+      
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+  <footer class="site-footer">
     <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
   </footer>
 </body>
 </html>
-
-
