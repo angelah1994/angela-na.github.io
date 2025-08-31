@@ -35,7 +35,7 @@ nav a {
   margin-bottom: 15px;
 }
 .profile-pic {
-  width: 50px;
+  width: 80px;
   border-radius: 50%;
   display: block;
   margin: 0 auto 10px;
@@ -57,4 +57,5 @@ footer {
   padding: 15px;
   margin-top: 30px;
 }
+
 
