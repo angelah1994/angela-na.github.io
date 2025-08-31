@@ -37,12 +37,12 @@ body {
 /* About Section Layout */
 .about-section {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;   /* fix: content not squashed to center */
   align-items: flex-start;
   padding: 40px;
   gap: 40px;
   max-width: 1200px;
-  margin: auto;
+  margin: 40px auto;             /* spacing from top/bottom */
 }
 
 /* Profile Card */
@@ -105,9 +105,14 @@ body {
 .about-text {
   background: white;
   padding: 25px;
-  flex: 1;
+  flex: 1;                       /* expand to fill space */
+  min-width: 0;                  /* prevent squashing */
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: left;              /* better readability */
+  line-height: 1.7;              /* improve text spacing */
+  font-size: 1rem;
+  max-width: 800px;              /* prevent too-wide lines */
 }
 
 .about-text h2 {
@@ -149,5 +154,6 @@ footer {
 
   .about-text {
     width: 100%;
+    max-width: none;
   }
 }
