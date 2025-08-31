@@ -10,6 +10,11 @@ body {
   line-height: 1.6;
   background: #f5f5f5;
   color: #333;
+  
+  /* Flexbox for Sticky Footer */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Hero Section */
@@ -26,8 +31,7 @@ body {
 }
 
 .hero-pic {
-  /* Reduced image size */
-  width: 120px; 
+  width: 120px;
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
@@ -57,6 +61,7 @@ body {
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease; /* Added for a smooth hover effect */
 }
 
 .navbar a:hover {
@@ -71,6 +76,7 @@ body {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  flex-grow: 1; /* Key to pushing the footer down */
 }
 
 .about-card h2 {
@@ -91,5 +97,5 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
-  margin-top: 40px;
+  margin-top: auto; /* Pushes the footer to the bottom of the page */
 }
