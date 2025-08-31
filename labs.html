@@ -3,85 +3,146 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lab Challenges | Angela Wafula</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Angela Wafula | Lab Challenges</title>
   <style>
-    /* Basic styles to improve layout and readability */
-    body, html {
-      height: 100%;
+    /* Reset some default margin and padding */
+    * {
       margin: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
       font-family: Arial, sans-serif;
       background: #f7f7f7;
       color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-    header, nav, footer {
-      flex-shrink: 0;
+    /* Header with title and subtitle aligned left, nav right */
+    header.site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 15px 40px;
       background-color: black;
       color: white;
+      flex-wrap: wrap; /* allow wrapping on small screens */
     }
-    nav a {
+    .header-info {
+      max-width: 60%;
+    }
+    .header-info h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.2em;
+    }
+    .header-info p {
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+    nav.site-nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      min-width: 300px;
+    }
+    nav.site-nav a {
       color: white;
-      margin-right: 20px;
       text-decoration: none;
       font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 15px;
+      transition: color 0.3s ease;
     }
-    nav a:hover, nav a.active {
+    nav.site-nav a:hover,
+    nav.site-nav a.active {
       color: #ffd600;
     }
-    section {
+    /* Section styles for lab content */
+    main {
       flex: 1 0 auto;
       max-width: 960px;
-      margin: 20px auto;
-      padding: 0 20px 40px;
+      margin: 30px auto 40px;
       background: white;
-      border-radius: 10px;
+      padding: 30px 40px;
+      border-radius: 12px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     }
-    h1, h2 {
+    main h2 {
       color: #003366;
-      margin-bottom: 0.5em;
+      margin-bottom: 20px;
+      font-size: 2rem;
     }
-    h3 {
-      margin-top: 1.5em;
-      margin-bottom: 0.3em;
-      color: #00509e;
-    }
-    p, ul {
-      margin: 0.3em 0 1em 0;
+    main p.intro {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
       line-height: 1.6;
     }
-    ul {
+    article.challenge {
+      margin-bottom: 40px;
+    }
+    article.challenge h3 {
+      color: #00509e;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+    article.challenge p {
+      margin: 0.3em 0 0.8em 0;
+      line-height: 1.5;
+    }
+    article.challenge ul {
       list-style-type: disc;
       padding-left: 20px;
+      margin-top: 0;
+      color: #444;
     }
-    strong {
-      color: #222;
-    }
-    footer {
+    /* Footer fixed at bottom if content is less */
+    footer.site-footer {
+      flex-shrink: 0;
+      background: black;
+      color: white;
       text-align: center;
+      padding: 18px 40px;
+      font-size: 0.9rem;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 700px) {
+      header.site-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .header-info {
+        max-width: 100%;
+        margin-bottom: 15px;
+      }
+      nav.site-nav {
+        min-width: 100%;
+        justify-content: flex-start;
+        gap: 15px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Angela Wafula</h1>
-    <p>ICT Officer | Certified Ethical Hacker</p>
+  <header class="site-header">
+    <div class="header-info">
+      <h1>Angela Wafula</h1>
+      <p>ICT Officer | Certified Ethical Hacker</p>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="labs.html" class="active">Lab Challenges</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="resume.html">Resume</a>
-    <a href="labs.html" class="active">Lab Challenges</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <section>
-    <h2>Lab Challenges</h2>
-    <p>Hands-on cybersecurity challenges demonstrating practical skills in various security domains.</p>
 
-    <article>
+  <main>
+    <h2>Lab Challenges</h2>
+    <p class="intro">Hands-on cybersecurity challenges demonstrating practical skills in various security domains.</p>
+
+    <article class="challenge">
       <h3>Web Application SQL Injection (Web Security)</h3>
       <p><strong>Problem Statement:</strong> A vulnerable web application with a login form was susceptible to SQL injection. The task was to bypass authentication and retrieve sensitive data.</p>
       <p><strong>Approach:</strong> Tested manually with payloads, confirmed vulnerability, then automated extraction with SQLmap.</p>
@@ -94,7 +155,7 @@
       </ul>
     </article>
 
-    <article>
+    <article class="challenge">
       <h3>Network Traffic Analysis (Network Security)</h3>
       <p><strong>Problem Statement:</strong> Analyzed a suspicious PCAP file to detect malicious traffic and exfiltrated data.</p>
       <p><strong>Approach:</strong> Inspected packets in Wireshark, detected DNS tunneling, and extracted hidden payloads.</p>
@@ -107,7 +168,7 @@
       </ul>
     </article>
 
-    <article>
+    <article class="challenge">
       <h3>Reverse Engineering CrackMe (Binary Exploitation)</h3>
       <p><strong>Problem Statement:</strong> A binary executable required a secret password to unlock functionality.</p>
       <p><strong>Approach:</strong> Decompiled binary in Ghidra, traced validation logic, retrieved correct password.</p>
@@ -120,7 +181,7 @@
       </ul>
     </article>
 
-    <article>
+    <article class="challenge">
       <h3>Privilege Escalation (Linux) (System Security)</h3>
       <p><strong>Problem Statement:</strong> Gained low-privileged shell on a vulnerable machine but required root access.</p>
       <p><strong>Approach:</strong> Enumerated SUID binaries, leveraged misconfigured scripts to escalate privileges.</p>
@@ -133,7 +194,7 @@
       </ul>
     </article>
 
-    <article>
+    <article class="challenge">
       <h3>Malware Analysis Lab (Malware & Threat Analysis)</h3>
       <p><strong>Problem Statement:</strong> Analyzed a suspicious Windows executable suspected to be malware.</p>
       <p><strong>Approach:</strong> Performed static analysis with strings and PE tools, followed by sandbox execution to observe behavior.</p>
@@ -146,7 +207,7 @@
       </ul>
     </article>
 
-    <article>
+    <article class="challenge">
       <h3>Brute Force & Password Cracking (Offensive Security)</h3>
       <p><strong>Problem Statement:</strong> Faced a weakly protected login portal requiring password discovery.</p>
       <p><strong>Approach:</strong> Captured login requests, then used Hydra and JohnTheRipper to brute force weak credentials.</p>
@@ -159,7 +220,7 @@
       </ul>
     </article>
 
-    <article>
+    <article class="challenge">
       <h3>Incident Response Simulation (Blue Teaming)</h3>
       <p><strong>Problem Statement:</strong> Investigated a simulated attack on a corporate network environment.</p>
       <p><strong>Approach:</strong> Reviewed Splunk SIEM alerts, traced malicious activity, contained affected endpoints.</p>
@@ -172,7 +233,7 @@
       </ul>
     </article>
 
-    <article>
+    <article class="challenge">
       <h3>Threat Intelligence & Hunting (Threat Intelligence)</h3>
       <p><strong>Problem Statement:</strong> Tasked with investigating a targeted phishing campaign and mapping attacker TTPs.</p>
       <p><strong>Approach:</strong> Collected OSINT data, extracted IOCs from email headers, cross-referenced with VirusTotal and MITRE ATT&CK, and developed a threat profile.</p>
@@ -184,9 +245,9 @@
         <li>Importance of proactive threat hunting to reduce dwell time</li>
       </ul>
     </article>
-  </section>
+  </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
   </footer>
 </body>
