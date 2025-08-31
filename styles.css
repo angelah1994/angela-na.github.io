@@ -1,106 +1,35 @@
-/* General Page Styles */
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  min-height: 100vh;              /* Ensures body covers full height */
+.about-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
   display: flex;
-  flex-direction: column;         /* Makes footer stick at bottom */
-  background-color: #eef3f8;
-  color: #333;
-  line-height: 1.6;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
 }
 
-/* Header / Hero */
-header {
-  background: linear-gradient(135deg, #003366, #00509e);
-  color: #fff;
-  padding: 50px 20px;
-  text-align: center;
-}
-header h1 {
-  margin: 0;
-  font-size: 2.8rem;
-  font-weight: bold;
-}
-header p {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  letter-spacing: 0.5px;
-}
-
-/* Navigation */
-nav {
-  display: flex;
-  justify-content: center;
-  background-color: #00509e;
-  padding: 12px 0;
-}
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 20px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-nav a:hover {
-  color: #ffd700;
-}
-
-/* Sections */
-section {
-  flex: 1;                        /* Pushes footer down */
-  padding: 40px 20px;
-  max-width: 950px;
-  margin: auto;
-}
-section h2 {
-  color: #003366;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Profile Picture */
-.profile-pic {
-  width: 220px;                   /* Bigger size */
+/* Left Side - Image */
+.about-card img {
+  width: 220px;
   height: 220px;
   border-radius: 50%;
-  display: block;
-  margin: 30px auto 25px;
   object-fit: cover;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
   border: 5px solid #fff;
 }
 
-/* About Section Styling */
-.about {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin-top: 20px;
+/* Right Side - Text */
+.about-card div {
+  flex: 1;
 }
-.about p {
-  font-size: 1.05rem;
-  margin-bottom: 18px;
+.about-card h2 {
+  color: #003366;
+  margin-bottom: 15px;
+}
+.about-card p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
   text-align: justify;
-}
-
-/* Lab / Project Blocks */
-.project, .lab {
-  margin-bottom: 20px;
-  padding: 15px;
-  background-color: #e9f1f7;
-  border-left: 5px solid #003366;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-/* Footer */
-footer {
-  background-color: #003366;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
-  margin-top: auto;               /* Forces footer to stick at bottom */
 }
