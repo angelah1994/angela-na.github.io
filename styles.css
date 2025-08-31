@@ -4,6 +4,7 @@ body {
   font-family: Arial, sans-serif;
   background: #f7f7f7;
   color: #333;
+  line-height: 1.6;
 }
 
 /* Navbar */
@@ -33,13 +34,15 @@ body {
   color: #ffd600;
 }
 
-/* About Section */
+/* About Section Layout */
 .about-section {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 40px;
   gap: 40px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* Profile Card */
@@ -50,11 +53,14 @@ body {
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
   text-align: center;
+  flex-shrink: 0;
 }
 
 .profile-pic {
   width: 120px;
+  height: 120px;
   border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 15px;
 }
 
@@ -126,4 +132,22 @@ footer {
   text-align: center;
   padding: 15px;
   margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .profile-card {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .about-text {
+    width: 100%;
+  }
 }
