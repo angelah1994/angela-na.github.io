@@ -7,42 +7,46 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <img src="Angela.jpg" alt="Angela Wafula" class="hero-pic" />
-      <h1>Angela Wafula</h1>
-      <p class="tagline">ICT Officer • Cybersecurity Enthusiast • Data Analyst • Data Science</p>
-    </div>
-  </header>
+  <!-- Navbar -->
   <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="resume.html">View Resume</a> <!-- Changed here -->
-    <a href="labs.html">Lab Challenges</a>
-    <a href="contacts.html">Contact</a>
-  </nav>
-  <section class="about-card">
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-        I am Angela Wafula, an ICT Officer and cybersecurity enthusiast with a deep commitment 
-        to protecting digital environments and ensuring systems run securely and efficiently.  
-        With experience in IT support, systems administration, and data analysis, I bridge the gap 
-        between technology operations and organizational goals.  
-      </p>
-      <p>
-        My journey in technology has been driven by curiosity and a passion for solving problems. 
-        Whether it’s securing networks, providing end-user support, or analyzing data for actionable insights, 
-        I enjoy helping organizations strengthen their digital resilience.  
-      </p>
-      <p>
-        Looking ahead, I am focused on advancing in <strong>cybersecurity and data science</strong>, 
-        leveraging technical expertise and analytical skills to contribute to safer, smarter, and more 
-        innovative digital ecosystems.
-      </p>
+    <div class="logo">Portfolio</div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="resume.html">View Resume</a>
+      <a href="labs.html">Lab Challenges</a>
+      <a href="contacts.html">Contact</a>
     </div>
-  </section>
-  <footer>
-    <div class="footer-content">
+  </nav>
+
+  <!-- Main Section -->
+  <section class="about-section">
+    <!-- Left Profile Card -->
+    <div class="profile-card">
+      <img src="Angela.jpg" alt="Angela Wafula" class="profile-pic" />
+      <h2>Angela Wafula</h2>
+      <p class="tagline">ICT Officer • Cybersecurity Enthusiast • Data Analyst • Data Science</p>
+
+      <p><strong>Email:</strong> angela@example.com</p>
+      <p><strong>Phone:</strong> +254 700 000 000</p>
+
+      <h3>Skills</h3>
+      <div class="skills">
+        <h4>Machine Learning</h4>
+        <p>Python / Pandas / NumPy</p>
+        <div class="progress"><span style="width: 80%"></span></div>
+
+        <h4>Cybersecurity</h4>
+        <p>Vulnerability Assessment & Pentesting</p>
+        <div class="progress"><span style="width: 85%"></span></div>
+
+        <p>Network Scanning & Enumeration</p>
+        <div class="progress"><span style="width: 75%"></span></div>
+
+        <p>Policy & Compliance Awareness</p>
+        <div class="progress"><span style="width: 70%"></span></div>
+      </div>
+
+      <!-- Social Icons -->
       <div class="footer-social">
         <a href="https://linkedin.com/in/yourprofile" target="_blank" class="footer-icon" aria-label="LinkedIn">
           <img src="linkedin-icon.svg" alt="LinkedIn">
@@ -51,10 +55,33 @@
           <img src="github-icon.svg" alt="GitHub">
         </a>
       </div>
-      <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
     </div>
+
+    <!-- Right About Me -->
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I am Angela Wafula, an ICT Officer and cybersecurity enthusiast with a deep commitment 
+        to protecting digital environments and ensuring systems run securely and efficiently.  
+        With experience in IT support, systems administration, and data analysis, I bridge the gap 
+        between technology operations and organizational goals.
+      </p>
+      <p>
+        My journey in technology has been driven by curiosity and a passion for solving problems.  
+        Whether it’s securing networks, providing end-user support, or analyzing data for actionable insights,  
+        I enjoy helping organizations strengthen their digital resilience.
+      </p>
+      <p>
+        Looking ahead, I am focused on advancing in <strong>cybersecurity and data science</strong>,  
+        leveraging technical expertise and analytical skills to contribute to safer, smarter, and more  
+        innovative digital ecosystems.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
   </footer>
 </body>
 </html>
-
-
