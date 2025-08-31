@@ -4,24 +4,165 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Angela Wafula | Resume</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Header */
+    header.resume-header {
+      padding: 20px 40px 15px;
+      background-color: black;
+      color: white;
+      flex-shrink: 0;
+    }
+    header.resume-header h1 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+    header.resume-header .title {
+      font-weight: 300;
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+    /* Navbar */
+    nav.resume-nav {
+      background-color: black;
+      display: flex;
+      gap: 25px;
+      padding: 10px 40px;
+      flex-shrink: 0;
+    }
+    nav.resume-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 15px;
+      transition: color 0.3s ease;
+    }
+    nav.resume-nav a:hover,
+    nav.resume-nav a.active {
+      color: #ffd600;
+    }
+    /* Main content */
+    main.resume-container {
+      flex: 1 0 auto;
+      max-width: 960px;
+      margin: 30px auto 40px;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+    main.resume-container h2 {
+      color: #003366;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    /* Work Experience */
+    .work-experience .job {
+      margin-bottom: 30px;
+    }
+    .work-experience h3 {
+      color: #00509e;
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+    }
+    .company-location, .dates {
+      font-style: italic;
+      color: #666;
+      margin-bottom: 8px;
+    }
+    .work-experience ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #444;
+      line-height: 1.5;
+    }
+    /* Education */
+    .education .education-item {
+      margin-bottom: 25px;
+    }
+    .education h3 {
+      color: #00509e;
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+    }
+    .education p {
+      color: #555;
+      font-style: normal;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    /* Skills */
+    .skills ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .skills li {
+      margin-bottom: 12px;
+      line-height: 1.5;
+      font-size: 1rem;
+      color: #444;
+    }
+    .skills strong {
+      color: #003366;
+    }
+    /* Footer (optional if you want same style) */
+    footer.site-footer {
+      flex-shrink: 0;
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 18px 40px;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 700px) {
+      header.resume-header, nav.resume-nav {
+        padding: 15px 20px;
+      }
+      main.resume-container {
+        margin: 20px 15px 40px;
+        padding: 20px 20px;
+        max-width: 95%;
+      }
+      nav.resume-nav {
+        gap: 12px;
+      }
+      nav.resume-nav a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="resume-header">
     <h1>Angela Wafula</h1>
     <p class="title">ICT Officer • Cybersecurity Enthusiast • Data Analyst • Data Science</p>
-    <nav class="resume-nav">
-      <a href="index.html">Home</a>
-      <a href="resume.html" class="active">Resume</a>
-      <a href="labs.html">Lab Challenges</a>
-      <a href="contacts.html">Get in Touch</a>
-    </nav>
   </header>
-
+  <nav class="resume-nav">
+    <a href="index.html">Home</a>
+    <a href="resume.html" class="active">Resume</a>
+    <a href="labs.html">Lab Challenges</a>
+    <a href="contacts.html">Get in Touch</a>
+  </nav>
   <main class="resume-container">
     <section class="work-experience">
       <h2>Work Experience</h2>
-
       <div class="job">
         <h3>IT Support Officer</h3>
         <p class="company-location">State Department of Economic Planning • Nairobi, Kenya</p>
@@ -38,7 +179,6 @@
           <li>Assisted in user onboarding by creating accounts, setting permissions, and providing IT orientation sessions.</li>
         </ul>
       </div>
-
       <div class="job">
         <h3>Digital Literacy Program Officer</h3>
         <p class="company-location">Ministry of Education • Bungoma, Kenya</p>
@@ -51,7 +191,6 @@
           <li>Developed step-by-step guides to help teachers create and share digital learning materials independently.</li>
         </ul>
       </div>
-
       <div class="job">
         <h3>ICT Intern</h3>
         <p class="company-location">Konza • Konza City, Kenya</p>
@@ -68,7 +207,6 @@
         </ul>
       </div>
     </section>
-
     <section class="education">
       <h2>Education</h2>
       <div class="education-item">
@@ -82,7 +220,6 @@
         <p>Graduated: 2011 – Grade: B</p>
       </div>
     </section>
-
     <section class="skills">
       <h2>Skills</h2>
       <ul>
@@ -93,7 +230,8 @@
       </ul>
     </section>
   </main>
+  <footer class="site-footer">
+    <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
+  </footer>
 </body>
 </html>
-
-
