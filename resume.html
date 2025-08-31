@@ -2,83 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Resume | Angela Wafula</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Angela Wafula | Resume</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
+  <header class="resume-header">
     <h1>Angela Wafula</h1>
-    <p>ICT Officer | Certified Ethical Hacker</p>
+    <p class="title">ICT Officer | Certified Ethical Hacker</p>
+    <nav class="resume-nav">
+      <a href="index.html">Home</a>
+      <a href="resume.html" class="active">Resume</a>
+      <a href="labs.html">Lab Challenges</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="resume.html">Resume</a>
-    <a href="labs.html">Lab Challenges</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <main class="resume-container">
+    <section class="work-experience">
+      <h2>Work Experience</h2>
 
-  <section>
-    <h2>Resume</h2>
-
-    <h3>Education</h3>
-    <ul>
-      <li><strong>BSc in Computer Security and Forensics</strong>, Jaramogi Oginga Odinga University – Second Class Honors (Upper Division)</li>
-      <li><strong>KCSE</strong>, St. Cecilia Girls High School – Grade B+</li>
-    </ul>
-
-    <h3>Experience</h3>
-    <ul>
-      <li>
-        <strong>IT Support Officer</strong> – Freelance / Contract Projects  
-        <br><em>Ongoing</em>
+      <div class="job">
+        <h3>IT Support Officer</h3>
+        <p class="company-location">State Department of Economic Planning • Nairobi, Kenya</p>
+        <p class="dates">2023 – 2024</p>
         <ul>
-          <li>Diagnosed and resolved software, hardware, and connectivity issues.</li>
-          <li>Installed, configured, and maintained operating systems, routers, and printers.</li>
-          <li>Implemented secure network configurations and data backup solutions.</li>
-          <li>Provided remote and on-site technical support.</li>
-          <li>Documented support processes to improve service efficiency.</li>
+          <li>Delivered hands-on technical support to end users, diagnosing and resolving diverse IT issues with emphasis on timely resolution and minimal disruption to operations.</li>
+          <li>Communicated technical concepts in clear, simple terms to non-technical users, reducing repeat support requests.</li>
+          <li>Troubleshot network connectivity problems, collaborating with colleagues to isolate root causes, resulting in a 30% reduction in downtime.</li>
+          <li>Managed installation, configuration, and maintenance of computers, printers, and peripherals, ensuring optimal performance and security compliance.</li>
+          <li>Performed regular software installations, upgrades, and patch management to maintain system stability and reduce vulnerabilities.</li>
+          <li>Coordinated wireless access point setup for a large department, improving user satisfaction.</li>
+          <li>Monitored system performance and network health using diagnostic tools to proactively identify issues.</li>
+          <li>Documented technical procedures and solutions in a knowledge base to streamline future support and train new IT staff.</li>
+          <li>Assisted in user onboarding by creating accounts, setting permissions, and providing IT orientation sessions.</li>
         </ul>
-      </li>
-      <li>
-        <strong>Intern</strong> – State Department of Economic Planning  
-        <br><em>01/2023 – 12/2024 | Nairobi, Kenya</em>
+      </div>
+
+      <div class="job">
+        <h3>Digital Literacy Program Officer</h3>
+        <p class="company-location">Ministry of Education • Bungoma, Kenya</p>
+        <p class="dates">2021 – 2022</p>
         <ul>
-          <li>Provided technical support for staff and resolved IT issues promptly.</li>
-          <li>Configured and secured workstations and user accounts.</li>
-          <li>Maintained IT inventory and conducted system backups.</li>
+          <li>Facilitated integration of ICT into teaching and learning, enhancing digital literacy among educators and learners aligned with curriculum goals.</li>
+          <li>Managed and updated learner records on the NEMIS portal to maintain accurate data.</li>
+          <li>Delivered teacher workshops on effective use of digital devices and tools for lesson delivery and content creation.</li>
+          <li>Provided in-classroom ICT support, assisting educators with technology setup and troubleshooting.</li>
+          <li>Developed step-by-step guides to help teachers create and share digital learning materials independently.</li>
         </ul>
-      </li>
-      <li>
-        <strong>ICT Intern</strong> – Konza City  
-        <br><em>01/2019 – 12/2020 | Konza City, Kenya</em>
+      </div>
+
+      <div class="job">
+        <h3>ICT Intern</h3>
+        <p class="company-location">Konza • Konza City, Kenya</p>
+        <p class="dates">2019 – 2020</p>
         <ul>
-          <li>Provided technical support to over 50 users.</li>
-          <li>Maintained IT infrastructure with 98% uptime.</li>
-          <li>Monitored and optimized network performance.</li>
+          <li>Provided end-user technical support, resolving hardware, software, and connectivity issues to minimize downtime.</li>
+          <li>Supported ERP implementation including user training, troubleshooting, and post-go-live assistance.</li>
+          <li>Managed and supported office ICT functions, including Office 365, SharePoint, Power BI, and an Electronic Document Management System.</li>
+          <li>Diagnosed and resolved network problems to ensure secure connectivity.</li>
+          <li>Administered Active Directory including user and group management and access permissions.</li>
+          <li>Setup and maintained hardware ensuring compliance with IT standards.</li>
+          <li>Monitored and deployed ICT resources to optimize asset management.</li>
+          <li>Maintained and updated the company website ensuring optimal performance.</li>
         </ul>
-      </li>
-    </ul>
+      </div>
+    </section>
 
-    <h3>Certifications</h3>
-    <ul>
-      <li>Ethical Hacking – Cyber Shujaa (2025)</li>
-      <li>Cybersecurity Awareness Training</li>
-    </ul>
+    <section class="education">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>Bachelor of Science in Computer Security and Forensics</h3>
+        <p>Jaramogi Oginga Odinga University of Science and Technology, Bondo, Kenya</p>
+        <p>Graduated: 2017 – Second Class Honors, Upper Division</p>
+      </div>
+      <div class="education-item">
+        <h3>Kenya Certificate of Secondary Education (KCSE)</h3>
+        <p>St. Cecilia Girls High School, Misikhu, Kenya</p>
+        <p>Graduated: 2011 – Grade: B</p>
+      </div>
+    </section>
 
-    <h3>Skills</h3>
-    <ul>
-      <li>IT Support & Troubleshooting</li>
-      <li>Network Configuration & Security</li>
-      <li>System Administration</li>
-      <li>Cybersecurity Best Practices</li>
-      <li>Hardware & Software Maintenance</li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
-  </footer>
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>ICT Support & Systems:</strong> Technical Support, Helpdesk Operations, User Training, ERP Implementation, Office 365 (Outlook, Teams, OneDrive, SharePoint), EDMS, IT Asset Management</li>
+        <li><strong>Systems & Network Administration:</strong> Active Directory (User/Group Management, GPO), Wireless Configuration, Software Installation & Patch Management, Network Security</li>
+        <li><strong>Programming & Data Tools:</strong> Python, SQL, R, Database Management, Power BI</li>
+        <li><strong>Cybersecurity & Tools:</strong> Vulnerability Assessment, Penetration Testing, Web App Security (OWASP Top 10), Nmap, Wireshark, Metasploit, Burp Suite, John the Ripper, Aircrack-ng, Hydra, Nikto, Dig, Enum4linux, SMBclient</li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
