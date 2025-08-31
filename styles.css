@@ -55,6 +55,14 @@ html, body {
   min-height: calc(100vh - 110px);
 }
 
+/* Left Column Container */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex-shrink: 0;
+}
+
 /* Profile Card */
 .profile-card {
   background: white;
@@ -63,7 +71,6 @@ html, body {
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
   text-align: center;
-  flex-shrink: 0;
 }
 
 .profile-pic {
@@ -84,14 +91,14 @@ html, body {
   margin-bottom: 15px;
   font-size: 0.9rem;
 }
+
+/* Certifications Card */
 .certifications-card {
   background: white;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  max-width: 700px;
-  margin-top: 40px;
-  line-height: 1.6;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  max-width: 320px;
   color: #222;
 }
 
@@ -110,32 +117,6 @@ html, body {
   margin-bottom: 10px;
   font-size: 0.95rem;
   color: #444;
-}
-
-/* Skills */
-.skills h4 {
-  margin-top: 20px;
-  color: #003366;
-}
-
-.skills p {
-  margin: 8px 0 5px;
-  font-size: 0.95rem;
-}
-
-.progress {
-  background: #eee;
-  border-radius: 20px;
-  height: 8px;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.progress span {
-  display: block;
-  height: 100%;
-  border-radius: 20px;
-  background: #28a745;
 }
 
 /* About Text */
@@ -189,14 +170,16 @@ footer {
     flex-direction: column;
     padding: 20px;
   }
-  .profile-card {
+  .left-column {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-card, .certifications-card {
     width: 100%;
     max-width: 400px;
-    margin: auto;
   }
   .about-text {
     width: 100%;
     max-width: none;
   }
 }
-
