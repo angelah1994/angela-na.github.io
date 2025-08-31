@@ -6,34 +6,63 @@
   <title>Lab Challenges | Angela Wafula</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Ensure footer sticks nicely at bottom with min-height on body */
+    /* Basic styles to improve layout and readability */
     body, html {
       height: 100%;
       margin: 0;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #333;
     }
-    body > *:not(footer) {
+    header, nav, footer {
       flex-shrink: 0;
+      padding: 15px 40px;
+      background-color: black;
+      color: white;
+    }
+    nav a {
+      color: white;
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover, nav a.active {
+      color: #ffd600;
     }
     section {
       flex: 1 0 auto;
-      padding-bottom: 40px; /* give bottom space before footer */
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 0 20px 40px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #003366;
+      margin-bottom: 0.5em;
+    }
+    h3 {
+      margin-top: 1.5em;
+      margin-bottom: 0.3em;
+      color: #00509e;
+    }
+    p, ul {
+      margin: 0.3em 0 1em 0;
+      line-height: 1.6;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    strong {
+      color: #222;
     }
     footer {
-      flex-shrink: 0;
-      background: black;
-      color: white;
       text-align: center;
-      padding: 15px;
-    }
-    /* Optional styling for the new projects list */
-    .projects-list {
-      list-style-type: disc;
-      margin-left: 20px;
-      margin-top: 10px;
-      line-height: 1.6;
     }
   </style>
 </head>
@@ -45,31 +74,118 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="resume.html">Resume</a>
-    <a href="labs.html">Lab Challenges</a>
+    <a href="labs.html" class="active">Lab Challenges</a>
     <a href="contact.html">Contact</a>
   </nav>
   <section>
-    <h2>CYBERSECURITY PROJECTS (TRAINING & LABS)</h2>
-    <ul class="projects-list">
-      <li>Conducted simulated penetration tests on web applications using Burp Suite, Nmap, and Metasploit, identifying OWASP Top 10 vulnerabilities and preparing mitigation reports.</li>
-      <li>Performed network traffic analysis with Wireshark to detect anomalies, suspicious packets, and potential intrusion attempts.</li>
-      <li>Executed password auditing and brute-force simulations with John the Ripper and Hydra to assess system resilience.</li>
-      <li>Configured and tested Linux-based security tools (Aircrack-ng, Nikto, Enum4linux) for vulnerability scanning and exploitation exercises.</li>
-      <li>Documented findings and recommendations following CEH structured methodology (Reconnaissance, Scanning, Gaining Access, Maintaining Access, and Covering Tracks).</li>
-    </ul>
-
     <h2>Lab Challenges</h2>
-    <div class="lab">
-      <h3>Cyber Shujaa Challenge: Network Scanning</h3>
-      <p><strong>Tools:</strong> Nmap, Zenmap</p>
-      <p><strong>Approach:</strong> Performed SYN and UDP scans to identify active hosts and open ports.</p>
-    </div>
-    <div class="lab">
-      <h3>Web Vulnerability Testing</h3>
-      <p><strong>Tools:</strong> Burp Suite, OWASP ZAP</p>
-      <p><strong>Approach:</strong> Conducted manual and automated scans to detect OWASP Top 10 vulnerabilities.</p>
-    </div>
+    <p>Hands-on cybersecurity challenges demonstrating practical skills in various security domains.</p>
+
+    <article>
+      <h3>Web Application SQL Injection (Web Security)</h3>
+      <p><strong>Problem Statement:</strong> A vulnerable web application with a login form was susceptible to SQL injection. The task was to bypass authentication and retrieve sensitive data.</p>
+      <p><strong>Approach:</strong> Tested manually with payloads, confirmed vulnerability, then automated extraction with SQLmap.</p>
+      <p><strong>Tools Used:</strong> Burp Suite, SQLmap, Browser DevTools</p>
+      <p><strong>Key Lessons:</strong></p>
+      <ul>
+        <li>Importance of parameterized queries in web applications</li>
+        <li>Manual and automated SQL injection testing</li>
+        <li>Secure coding practices to mitigate SQLi</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Network Traffic Analysis (Network Security)</h3>
+      <p><strong>Problem Statement:</strong> Analyzed a suspicious PCAP file to detect malicious traffic and exfiltrated data.</p>
+      <p><strong>Approach:</strong> Inspected packets in Wireshark, detected DNS tunneling, and extracted hidden payloads.</p>
+      <p><strong>Tools Used:</strong> Wireshark, Tshark, Python scripts</p>
+      <p><strong>Key Lessons:</strong></p>
+      <ul>
+        <li>Normal vs. abnormal network patterns</li>
+        <li>DNS-based data exfiltration techniques</li>
+        <li>Importance of continuous monitoring</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Reverse Engineering CrackMe (Binary Exploitation)</h3>
+      <p><strong>Problem Statement:</strong> A binary executable required a secret password to unlock functionality.</p>
+      <p><strong>Approach:</strong> Decompiled binary in Ghidra, traced validation logic, retrieved correct password.</p>
+      <p><strong>Tools Used:</strong> Ghidra, GDB, Radare2</p>
+      <p><strong>Key Lessons:</strong></p>
+      <ul>
+        <li>Fundamentals of reverse engineering</li>
+        <li>Debugging binaries for logic flow</li>
+        <li>Risks of hardcoding credentials</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Privilege Escalation (Linux) (System Security)</h3>
+      <p><strong>Problem Statement:</strong> Gained low-privileged shell on a vulnerable machine but required root access.</p>
+      <p><strong>Approach:</strong> Enumerated SUID binaries, leveraged misconfigured scripts to escalate privileges.</p>
+      <p><strong>Tools Used:</strong> LinPEAS, GTFOBins, Linux commands</p>
+      <p><strong>Key Lessons:</strong></p>
+      <ul>
+        <li>Privilege escalation vectors on Linux</li>
+        <li>Importance of patching misconfigurations</li>
+        <li>Realistic attacker post-exploitation tactics</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Malware Analysis Lab (Malware & Threat Analysis)</h3>
+      <p><strong>Problem Statement:</strong> Analyzed a suspicious Windows executable suspected to be malware.</p>
+      <p><strong>Approach:</strong> Performed static analysis with strings and PE tools, followed by sandbox execution to observe behavior.</p>
+      <p><strong>Tools Used:</strong> Strings, PEStudio, Any.Run Sandbox</p>
+      <p><strong>Key Lessons:</strong></p>
+      <ul>
+        <li>Extracting IOCs from malware samples</li>
+        <li>Difference between static and dynamic analysis</li>
+        <li>Importance of sandbox environments for safety</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Brute Force & Password Cracking (Offensive Security)</h3>
+      <p><strong>Problem Statement:</strong> Faced a weakly protected login portal requiring password discovery.</p>
+      <p><strong>Approach:</strong> Captured login requests, then used Hydra and JohnTheRipper to brute force weak credentials.</p>
+      <p><strong>Tools Used:</strong> Hydra, JohnTheRipper, Burp Suite</p>
+      <p><strong>Key Lessons:</strong></p>
+      <ul>
+        <li>Risks of weak password policies</li>
+        <li>Rate limiting and lockout mechanisms</li>
+        <li>Strong password management strategies</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Incident Response Simulation (Blue Teaming)</h3>
+      <p><strong>Problem Statement:</strong> Investigated a simulated attack on a corporate network environment.</p>
+      <p><strong>Approach:</strong> Reviewed Splunk SIEM alerts, traced malicious activity, contained affected endpoints.</p>
+      <p><strong>Tools Used:</strong> Splunk, Sysinternals Suite, Event Logs</p>
+      <p><strong>Key Lessons:</strong></p>
+      <ul>
+        <li>Incident detection and triage</li>
+        <li>Log correlation for threat hunting</li>
+        <li>Responding quickly to limit damage</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Threat Intelligence & Hunting (Threat Intelligence)</h3>
+      <p><strong>Problem Statement:</strong> Tasked with investigating a targeted phishing campaign and mapping attacker TTPs.</p>
+      <p><strong>Approach:</strong> Collected OSINT data, extracted IOCs from email headers, cross-referenced with VirusTotal and MITRE ATT&CK, and developed a threat profile.</p>
+      <p><strong>Tools Used:</strong> OSINT Framework, VirusTotal, MISP, MITRE ATT&CK Navigator</p>
+      <p><strong>Key Lessons:</strong></p>
+      <ul>
+        <li>How to extract actionable intelligence from raw indicators</li>
+        <li>Correlating attacker behaviors with MITRE ATT&CK techniques</li>
+        <li>Importance of proactive threat hunting to reduce dwell time</li>
+      </ul>
+    </article>
   </section>
+
   <footer>
     <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
   </footer>
