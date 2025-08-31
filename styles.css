@@ -1,135 +1,129 @@
-/* Existing styles above... */
-
-/* Resume Page Styles */
-.resume-header {
-  max-width: 900px;
-  margin: 40px auto 20px;
-  text-align: center;
-  padding: 0 20px;
+/* General */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
 }
 
-.resume-header h1 {
-  font-size: 3rem;
-  color: #003366;
-  margin-bottom: 6px;
-  font-weight: 700;
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+  padding: 12px 40px;
 }
 
-.resume-header .title {
-  font-size: 1.3rem;
-  font-weight: 400;
-  color: #555;
-  letter-spacing: 1px;
-  margin-bottom: 18px;
-}
-
-.resume-nav {
-  margin-bottom: 40px;
-}
-
-.resume-nav a {
-  color: #00509e;
-  text-decoration: none;
-  font-weight: 600;
-  margin: 0 12px;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.resume-nav a.active,
-.resume-nav a:hover {
-  color: #ffd600;
-  text-decoration: underline;
-}
-
-.resume-container {
-  max-width: 900px;
-  margin: auto;
-  padding: 0 20px 60px;
-  background: white;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-}
-
-.resume-container section {
-  margin-bottom: 50px;
-}
-
-.resume-container h2 {
-  color: #003366;
-  font-size: 2rem;
-  margin-bottom: 30px;
-  font-weight: 700;
-  border-bottom: 3px solid #ffd600;
-  padding-bottom: 8px;
-}
-
-.job, .education-item {
-  margin-bottom: 25px;
-}
-
-.job h3, .education-item h3 {
-  color: #00509e;
+.navbar .logo {
   font-size: 1.4rem;
-  margin-bottom: 4px;
-  font-weight: 700;
+  font-weight: bold;
 }
 
-.company-location, .dates {
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.navbar .nav-links a.active,
+.navbar .nav-links a:hover {
+  color: #ffd600;
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 40px;
+}
+
+/* Profile Card */
+.profile-card {
+  background: white;
+  padding: 25px;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.profile-pic {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.profile-card h2 {
+  margin: 10px 0 5px;
+}
+
+.tagline {
   font-style: italic;
-  color: #777;
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+/* Skills */
+.skills h4 {
+  margin-top: 20px;
+  color: #003366;
+}
+
+.skills p {
+  margin: 8px 0 5px;
   font-size: 0.95rem;
-  margin-bottom: 12px;
 }
 
-.job ul, .skills ul {
-  padding-left: 20px;
-  list-style-type: disc;
-}
-
-.job ul li, .skills ul li {
-  margin-bottom: 8px;
-  font-size: 1.05rem;
-  line-height: 1.5;
-  color: #444;
-}
-
-.skills ul {
-  columns: 1;
-  column-gap: 40px;
-}
-
-.skills ul li {
+.progress {
+  background: #eee;
+  border-radius: 20px;
+  height: 8px;
+  width: 100%;
   margin-bottom: 10px;
 }
 
-.skills strong {
-  color: #003366;
+.progress span {
+  display: block;
+  height: 100%;
+  border-radius: 20px;
+  background: #28a745;
 }
 
-/* Responsive adjustments for resume page */
-@media (max-width: 600px) {
-  .resume-header h1 {
-    font-size: 2rem;
-  }
-  
-  .resume-header .title {
-    font-size: 1.1rem;
-  }
+/* About Text */
+.about-text {
+  background: white;
+  padding: 25px;
+  flex: 1;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
 
-  .resume-container {
-    padding: 0 15px 40px;
-  }
+.about-text h2 {
+  color: #003366;
+  margin-bottom: 20px;
+}
 
-  .resume-container h2 {
-    font-size: 1.6rem;
-  }
+/* Social Icons in Card */
+.footer-social {
+  margin-top: 20px;
+}
 
-  .job h3, .education-item h3 {
-    font-size: 1.1rem;
-  }
+.footer-social a img {
+  width: 28px;
+  margin: 0 8px;
+}
 
-  .job ul li, .skills ul li {
-    font-size: 1rem;
-  }
+/* Footer */
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
 }
