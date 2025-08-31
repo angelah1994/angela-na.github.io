@@ -5,14 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Angela Wafula | Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <script>
-    function showSection(id) {
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(section => section.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-    window.onload = () => showSection('home');
-  </script>
 </head>
 <body>
   <header>
@@ -21,13 +13,13 @@
   </header>
 
   <nav>
-    <a href="#" onclick="showSection('home')">Home</a>
-    <a href="#" onclick="showSection('resume')">Resume</a>
-    <a href="#" onclick="showSection('labs')">Lab Challenges</a>
-    <a href="#" onclick="showSection('contact')">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="labs.html">Lab Challenges</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <section id="home" class="section active">
+  <section>
     <img src="Angela.jpg" alt="Angela Wafula" class="profile-pic" />
     <h2>Welcome</h2>
     <p>
@@ -37,94 +29,8 @@
     </p>
   </section>
 
-  <section id="resume" class="section">
-    <h2>Resume</h2>
-
-    <h3>Education</h3>
-    <ul>
-      <li><strong>BSc in Computer Security and Forensics</strong>, Jaramogi Oginga Odinga University – Second Class Honors (Upper Division)</li>
-      <li><strong>KCSE</strong>, St. Cecilia Girls High School – Grade B+</li>
-    </ul>
-
-    <h3>Experience</h3>
-    <ul>
-      <li>
-        <strong>IT Support Officer</strong> – Freelance / Contract Projects  
-        <br><em>Ongoing</em>
-        <ul>
-          <li>Diagnosed and resolved software, hardware, and connectivity issues.</li>
-          <li>Installed, configured, and maintained operating systems, routers, and printers.</li>
-          <li>Implemented secure network configurations and data backup solutions.</li>
-          <li>Provided remote and on-site technical support.</li>
-          <li>Documented support processes to improve service efficiency.</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Intern</strong> – State Department of Economic Planning  
-        <br><em>01/2023 – 12/2024 | Nairobi, Kenya</em>
-        <ul>
-          <li>Provided technical support for staff and resolved IT issues promptly.</li>
-          <li>Configured and secured workstations and user accounts.</li>
-          <li>Maintained IT inventory and conducted system backups.</li>
-        </ul>
-      </li>
-      <li>
-        <strong>ICT Intern</strong> – Konza City  
-        <br><em>01/2019 – 12/2020 | Konza City, Kenya</em>
-        <ul>
-          <li>Provided technical support to over 50 users.</li>
-          <li>Maintained IT infrastructure with 98% uptime.</li>
-          <li>Monitored and optimized network performance.</li>
-        </ul>
-      </li>
-    </ul>
-
-    <h3>Certifications</h3>
-    <ul>
-      <li>Ethical Hacking – Cyber Shujaa (2025)</li>
-      <li>Cybersecurity Awareness Training</li>
-    </ul>
-
-    <h3>Skills</h3>
-    <ul>
-      <li>IT Support & Troubleshooting</li>
-      <li>Network Configuration & Security</li>
-      <li>System Administration</li>
-      <li>Cybersecurity Best Practices</li>
-      <li>Hardware & Software Maintenance</li>
-    </ul>
-  </section>
-
-
-  <section id="labs" class="section">
-    <h2>Lab Challenges</h2>
-    <div class="lab">
-      <h3>Cyber Shujaa Challenge: Network Scanning</h3>
-      <p><strong>Tools:</strong> Nmap, Zenmap</p>
-      <p><strong>Approach:</strong> Performed SYN and UDP scans to identify active hosts and open ports.</p>
-    </div>
-    <div class="lab">
-      <h3>Web Vulnerability Testing</h3>
-      <p><strong>Tools:</strong> Burp Suite, OWASP ZAP</p>
-      <p><strong>Approach:</strong> Conducted manual and automated scans to detect OWASP Top 10 vulnerabilities.</p>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:wafulaangelah@yahoo.com">wafulaangelah@yahoo.com</a></p>
-    <p>Phone: +254 722 624 649</p>
-    <p>
-      <a href="https://github.com/Angelah1994" target="_blank">GitHub</a> |
-      <a href="#">LinkedIn</a>
-    </p>
-  </section>
-
   <footer>
     <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
   </footer>
 </body>
 </html>
-
-
-
