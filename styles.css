@@ -1,10 +1,15 @@
 /* General */
-body {
+html, body {
+  height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f7f7f7;
   color: #333;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 10px;
 }
 
 /* Navbar */
@@ -15,6 +20,7 @@ body {
   background: black;
   color: white;
   padding: 12px 40px;
+  flex-shrink: 0;
 }
 
 .navbar .logo {
@@ -36,13 +42,17 @@ body {
 
 /* About Section Layout */
 .about-section {
+  flex: 1 0 auto; /* Grow to fill vertical space */
   display: flex;
-  justify-content: flex-start;   /* fix: content not squashed to center */
+  justify-content: flex-start;
   align-items: flex-start;
   padding: 40px;
   gap: 40px;
   max-width: 1200px;
-  margin: 40px auto;             /* spacing from top/bottom */
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: calc(100vh - 110px);
 }
 
 /* Profile Card */
@@ -105,14 +115,14 @@ body {
 .about-text {
   background: white;
   padding: 25px;
-  flex: 1;                       /* expand to fill space */
-  min-width: 0;                  /* prevent squashing */
+  flex: 1; /* expand to fill space */
+  min-width: 0; /* prevent squashing */
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-  text-align: left;              /* better readability */
-  line-height: 1.7;              /* improve text spacing */
+  text-align: left;
+  line-height: 1.7;
   font-size: 1rem;
-  max-width: 800px;              /* prevent too-wide lines */
+  max-width: 800px;
 }
 
 .about-text h2 {
@@ -128,6 +138,12 @@ body {
 .footer-social a img {
   width: 28px;
   margin: 0 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-social a:hover img {
+  filter: brightness(1.2);
+  transform: scale(1.1);
 }
 
 /* Footer */
@@ -136,7 +152,8 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
-  margin-top: 40px;
+  margin: 0;
+  flex-shrink: 0;
 }
 
 /* Responsive */
@@ -145,13 +162,11 @@ footer {
     flex-direction: column;
     padding: 20px;
   }
-
   .profile-card {
     width: 100%;
     max-width: 400px;
     margin: auto;
   }
-
   .about-text {
     width: 100%;
     max-width: none;
