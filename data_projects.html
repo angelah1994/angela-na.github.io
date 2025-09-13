@@ -13,6 +13,30 @@
       margin: 0;
       padding: 0;
     }
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: black;
+      color: white;
+      padding: 15px 40px;
+    }
+    .navbar .logo {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffd600;
+    }
     header {
       background: black;
       color: white;
@@ -70,10 +94,23 @@
   </style>
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Portfolio</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="resume.html">View Resume</a>
+      <a href="labs.html">Lab Challenges</a>
+      <a href="data-projects.html" class="active">Data Projects</a>
+      <a href="contacts.html">Get in Touch</a>
+    </div>
+  </nav>
+
   <header>
     <h1>Data Projects</h1>
     <p>Showcasing Data Science & Analysis Work</p>
   </header>
+
   <main>
     <!-- Project 1 -->
     <div class="project">
@@ -127,6 +164,7 @@
       <a href="https://github.com/angelah1994/Impact-on-Climate-Change-on-Global-crop-Yields" target="_blank">🔗 View on GitHub</a>
     </div>
   </main>
+
   <footer>
     <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
   </footer>
