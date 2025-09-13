@@ -191,42 +191,6 @@
         </ul>
       </article>
       <article class="challenge">
-        <h3>Reverse Engineering CrackMe (Binary Exploitation)</h3>
-        <p><strong>Problem Statement:</strong> A binary executable required a secret password to unlock functionality.</p>
-        <p><strong>Approach:</strong> Decompiled binary in Ghidra, traced validation logic, retrieved correct password.</p>
-        <p><strong>Tools Used:</strong> Ghidra, GDB, Radare2</p>
-        <p><strong>Key Lessons:</strong></p>
-        <ul>
-          <li>Fundamentals of reverse engineering</li>
-          <li>Debugging binaries for logic flow</li>
-          <li>Risks of hardcoding credentials</li>
-        </ul>
-      </article>
-      <article class="challenge">
-        <h3>Privilege Escalation (Linux) (System Security)</h3>
-        <p><strong>Problem Statement:</strong> Gained low-privileged shell on a vulnerable machine but required root access.</p>
-        <p><strong>Approach:</strong> Enumerated SUID binaries, leveraged misconfigured scripts to escalate privileges.</p>
-        <p><strong>Tools Used:</strong> LinPEAS, GTFOBins, Linux commands</p>
-        <p><strong>Key Lessons:</strong></p>
-        <ul>
-          <li>Privilege escalation vectors on Linux</li>
-          <li>Importance of patching misconfigurations</li>
-          <li>Realistic attacker post-exploitation tactics</li>
-        </ul>
-      </article>
-      <article class="challenge">
-        <h3>Malware Analysis Lab (Malware & Threat Analysis)</h3>
-        <p><strong>Problem Statement:</strong> Analyzed a suspicious Windows executable suspected to be malware.</p>
-        <p><strong>Approach:</strong> Performed static analysis with strings and PE tools, followed by sandbox execution to observe behavior.</p>
-        <p><strong>Tools Used:</strong> Strings, PEStudio, Any.Run Sandbox</p>
-        <p><strong>Key Lessons:</strong></p>
-        <ul>
-          <li>Extracting IOCs from malware samples</li>
-          <li>Difference between static and dynamic analysis</li>
-          <li>Importance of sandbox environments for safety</li>
-        </ul>
-      </article>
-      <article class="challenge">
         <h3>Brute Force & Password Cracking (Offensive Security)</h3>
         <p><strong>Problem Statement:</strong> Faced a weakly protected login portal requiring password discovery.</p>
         <p><strong>Approach:</strong> Captured login requests, then used Hydra and JohnTheRipper to brute force weak credentials.</p>
@@ -262,6 +226,36 @@
           <li>Importance of proactive threat hunting to reduce dwell time</li>
         </ul>
       </article>
+
+      <!-- New additions: Leviathan and Natas Wars games -->
+      <article class="challenge">
+        <h3>Leviathan CTF (Capture The Flag)</h3>
+        <p><strong>Problem Statement:</strong> Participate in the Leviathan CTF game focusing on web, crypto, and forensics challenges to capture flags and score points.</p>
+        <p><strong>Approach:</strong> Solved progressive tasks across categories — started with reconnaissance, moved to exploit development, and finished with forensic artifact recovery. Documented each flag and reproduction steps.</p>
+        <p><strong>Tools Used:</strong> Burp Suite, Ghidra, binwalk, strings, Python (for automation), Volatility</p>
+        <p><strong>Key Lessons:</strong></p>
+        <ul>
+          <li>Combining multiple security disciplines to solve complex CTF tasks</li>
+          <li>Systematic recon and note-taking speeds up teamwork</li>
+          <li>How to safely extract and validate forensic artifacts</li>
+        </ul>
+  
+      </article>
+
+      <article class="challenge">
+        <h3>Natas Wars (Web Wargame)</h3>
+        <p><strong>Problem Statement:</strong> Complete web-based wargame levels from Natas Wars to practice input validation, authentication bypasses, and basic cryptography.</p>
+        <p><strong>Approach:</strong> Progressed through levels using manual testing and small scripts; catalogued common vulnerability patterns and crafted safe, repeatable exploits for lab learning.</p>
+        <p><strong>Tools Used:</strong> Browser DevTools, curl, Burp Suite, Python (requests), SQLmap (when applicable)</p>
+        <p><strong>Key Lessons:</strong></p>
+        <ul>
+          <li>Core web vulnerabilities and how they appear in intentionally vulnerable apps</li>
+          <li>Safe experimentation practices for learning (isolated lab environments)</li>
+          <li>How to write concise exploit scripts for repeatable testing</li>
+        </ul>
+      
+      </article>
+
     </div>
   </main>
   <footer class="site-footer">
@@ -269,5 +263,3 @@
   </footer>
 </body>
 </html>
-
-
