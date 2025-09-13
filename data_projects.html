@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Angela Wafula | Data Projects</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: black;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    main {
+      max-width: 1080px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+    .project {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    .project h2 {
+      color: #003366;
+      margin-bottom: 10px;
+    }
+    .project p {
+      line-height: 1.6;
+    }
+    .project ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: white;
+      background: #00509e;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    .project a:hover {
+      background: #003366;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: black;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Data Projects</h1>
+    <p>Showcasing Data Science & Analysis Work</p>
+  </header>
+  <main>
+    <!-- Project 1 -->
+    <div class="project">
+      <h2>Breast Cancer Prediction</h2>
+      <p>
+        This project focuses on building and evaluating machine learning models to predict whether a tumor is <strong>benign</strong> or <strong>malignant</strong> based on diagnostic data.  
+        Using the Breast Cancer Wisconsin dataset, I explored data, performed feature engineering, and tested Random Forest models.
+      </p>
+      <h3>📂 Dataset</h3>
+      <ul>
+        <li>Source: Breast Cancer Wisconsin (Diagnostic) Dataset – UCI / sklearn</li>
+        <li>Features: 30 numeric variables describing cell nuclei characteristics</li>
+        <li>Target: 0 = malignant, 1 = benign</li>
+        <li>Shape: ~569 samples × 30 features</li>
+      </ul>
+      <h3>🛠️ Steps in the Project</h3>
+      <ul>
+        <li>Data Exploration & Cleaning (missing values, statistical summaries, visualization)</li>
+        <li>Feature Engineering (normalization, feature selection)</li>
+        <li>Model Building (Random Forest)</li>
+        <li>Model Evaluation (Accuracy, Precision, Recall, F1-score, ROC-AUC, Cross-validation)</li>
+      </ul>
+      <h3>📊 Results</h3>
+      <p>
+        <strong>Best Model:</strong> Random Forest  
+        <br>Accuracy: ~95–98%  
+        <br>ROC-AUC: ~0.99  
+      </p>
+      <a href="https://github.com/angelah1994/Breast_Cancer_Prediction" target="_blank">🔗 View on GitHub</a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+      <h2>Impact of Climate Change on Global Crop Yields</h2>
+      <p>
+        This project investigates the <strong>impact of climate change on global crop yields</strong> using historical agricultural data, weather patterns, and environmental variables.  
+        The analysis highlights how rising temperatures, rainfall variability, and other climate factors influence crop productivity.
+      </p>
+      <h3>🛠️ Steps in the Project</h3>
+      <ul>
+        <li>Data Cleaning & Transformation</li>
+        <li>Exploratory Data Analysis (EDA) with visualizations & maps</li>
+        <li>Statistical Modeling & Forecasting</li>
+        <li>Professional-quality visualizations for reporting</li>
+      </ul>
+      <h3>📊 Results</h3>
+      <p>
+        Identified trends showing <strong>reduced crop yields in regions highly affected by temperature rise</strong>.  
+        Visualizations effectively mapped geographic disparities and highlighted vulnerable crop categories.
+      </p>
+      <a href="https://github.com/angelah1994/Impact-on-Climate-Change-on-Global-crop-Yields" target="_blank">🔗 View on GitHub</a>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
+  </footer>
+</body>
+</html>
