@@ -5,148 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Angela Wafula | Lab Challenges</title>
   <style>
-    /* Reset some default margin and padding */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #333;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    /* Header with title and subtitle aligned left, nav right */
-    header.site-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      background-color: black;
-      color: white;
-      flex-wrap: wrap; /* allow wrapping on small screens */
-    }
-    .header-info {
-      max-width: 60%;
-    }
-    .header-info h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.2em;
-    }
-    .header-info p {
-      font-size: 1.1rem;
-      font-weight: 300;
-    }
-    nav.site-nav {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      min-width: 300px;
-    }
-    nav.site-nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      padding: 8px 15px;
-      transition: color 0.3s ease;
-    }
-    nav.site-nav a:hover,
-    nav.site-nav a.active {
-      color: #ffd600;
-    }
-    /* Main content */
-    main {
-      flex: 1 0 auto;
-      max-width: 1080px;
-      margin: 30px auto 40px;
-      background: white;
-      padding: 30px 40px;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-    }
-    main h2 {
-      color: #003366;
-      margin-bottom: 20px;
-      font-size: 2rem;
-      text-align: center;
-    }
-    main p.intro {
-      margin-bottom: 30px;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      text-align: center;
-    }
-    /* Container for side-by-side challenge cards */
-    .challenge-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: space-between;
-    }
-    article.challenge {
-      flex: 1 1 calc(50% - 30px); /* roughly two per row */
-      background: #fafafa;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-    }
-    article.challenge h3 {
-      color: #00509e;
-      margin-bottom: 10px;
-      font-size: 1.5rem;
-    }
-    article.challenge p {
-      margin: 0.3em 0 0.8em 0;
-      line-height: 1.5;
-      flex-grow: 0;
-    }
-    article.challenge ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-top: 0;
-      color: #444;
-      flex-grow: 1;
-    }
-    /* Footer */
-    footer.site-footer {
-      flex-shrink: 0;
-      background: black;
-      color: white;
-      text-align: center;
-      padding: 18px 40px;
-      font-size: 0.9rem;
-    }
-    /* Responsive adjustments */
-    @media (max-width: 900px) {
-      article.challenge {
-        flex: 1 1 100%; /* stack on smaller screens */
-      }
-      main {
-        padding: 20px;
-        max-width: 90%;
-      }
-      header.site-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .header-info {
-        max-width: 100%;
-        margin-bottom: 15px;
-      }
-      nav.site-nav {
-        min-width: 100%;
-        justify-content: flex-start;
-        gap: 15px;
-      }
-    }
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {font-family: Arial, sans-serif;background:#f7f7f7;color:#333;min-height:100vh;display:flex;flex-direction:column;}
+    header.site-header {display:flex;justify-content:space-between;align-items:center;padding:15px 40px;background-color:black;color:white;flex-wrap:wrap;}
+    .header-info {max-width:60%;}
+    .header-info h1 {font-size:1.8rem;margin-bottom:0.2em;}
+    .header-info p {font-size:1.1rem;font-weight:300;}
+    nav.site-nav {display:flex;gap:20px;flex-wrap:wrap;justify-content:flex-end;min-width:300px;}
+    nav.site-nav a {color:white;text-decoration:none;font-weight:600;font-size:1rem;padding:8px 15px;transition:color 0.3s ease;}
+    nav.site-nav a:hover,nav.site-nav a.active {color:#ffd600;}
+    main {flex:1 0 auto;max-width:1080px;margin:30px auto 40px;background:white;padding:30px 40px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.1);}
+    main h2 {color:#003366;margin-bottom:20px;font-size:2rem;text-align:center;}
+    main p.intro {margin-bottom:30px;font-size:1.1rem;line-height:1.6;text-align:center;}
+    .challenge-container {display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;}
+    article.challenge {flex:1 1 calc(50% - 30px);background:#fafafa;border-radius:10px;padding:20px;box-shadow:0 3px 8px rgba(0,0,0,0.1);display:flex;flex-direction:column;}
+    article.challenge h3 {color:#00509e;margin-bottom:10px;font-size:1.5rem;}
+    article.challenge p {margin:0.3em 0 0.8em 0;line-height:1.5;}
+    article.challenge ul {list-style-type:disc;padding-left:20px;margin-top:0;color:#444;}
+    footer.site-footer {flex-shrink:0;background:black;color:white;text-align:center;padding:18px 40px;font-size:0.9rem;}
+    @media (max-width:900px){article.challenge{flex:1 1 100%;}main{padding:20px;max-width:90%;}header.site-header{flex-direction:column;align-items:flex-start;}.header-info{max-width:100%;margin-bottom:15px;}nav.site-nav{min-width:100%;justify-content:flex-start;gap:15px;}}
   </style>
 </head>
 <body>
@@ -169,8 +46,8 @@
       <article class="challenge">
         <h3>Web Application SQL Injection (Web Security)</h3>
         <p><strong>Problem Statement:</strong> A vulnerable web application with a login form was susceptible to SQL injection. The task was to bypass authentication and retrieve sensitive data.</p>
-        <p><strong>Approach:</strong> Tested manually with payloads, confirmed vulnerability, then automated extraction with SQLmap.</p>
-        <p><strong>Tools Used:</strong> Burp Suite, SQLmap, Browser DevTools</p>
+        <p><strong>Approach:</strong> Tested manually with payloads, confirmed vulnerability, then automated extraction with SQLmap. Retrieved user data, cracked a password hash with John the Ripper, and used credentials to access a restricted host.</p>
+        <p><strong>Tools Used:</strong> Burp Suite, SQLmap, JohnTheRipper, Browser DevTools</p>
         <p><strong>Key Lessons:</strong></p>
         <ul>
           <li>Importance of parameterized queries in web applications</li>
@@ -178,20 +55,48 @@
           <li>Secure coding practices to mitigate SQLi</li>
         </ul>
       </article>
+
       <article class="challenge">
-        <h3>Network Traffic Analysis (Network Security)</h3>
-        <p><strong>Problem Statement:</strong> Analyzed a suspicious PCAP file to detect malicious traffic and exfiltrated data.</p>
-        <p><strong>Approach:</strong> Inspected packets in Wireshark, detected DNS tunneling, and extracted hidden payloads.</p>
-        <p><strong>Tools Used:</strong> Wireshark, Tshark, Python scripts</p>
+        <h3>Web Server Directory Enumeration</h3>
+        <p><strong>Problem Statement:</strong> A misconfigured web server allowed directory listing and exposure of sensitive files.</p>
+        <p><strong>Approach:</strong> Conducted reconnaissance with Gobuster and manual URL manipulation to discover open directories. Located and retrieved a hidden HTML file containing a flag.</p>
+        <p><strong>Tools Used:</strong> Gobuster, Dirb, Browser</p>
         <p><strong>Key Lessons:</strong></p>
         <ul>
-          <li>Normal vs. abnormal network patterns</li>
-          <li>DNS-based data exfiltration techniques</li>
-          <li>Importance of continuous monitoring</li>
+          <li>Risks of directory indexing</li>
+          <li>How to prevent accidental data exposure</li>
+          <li>Importance of secure web server configuration</li>
         </ul>
       </article>
+
       <article class="challenge">
-        <h3>Brute Force & Password Cracking (Offensive Security)</h3>
+        <h3>SMB Share Enumeration</h3>
+        <p><strong>Problem Statement:</strong> Identified unsecured SMB shares that allowed anonymous access to sensitive files.</p>
+        <p><strong>Approach:</strong> Used Nmap to scan for open SMB services, enumerated shares with smbclient, and accessed publicly available files to retrieve a flag.</p>
+        <p><strong>Tools Used:</strong> Nmap, smbclient</p>
+        <p><strong>Key Lessons:</strong></p>
+        <ul>
+          <li>Risks of leaving SMB shares open to anonymous users</li>
+          <li>Proper access controls for network shares</li>
+          <li>Need for regular service audits</li>
+        </ul>
+      </article>
+
+      <article class="challenge">
+        <h3>PCAP File Analysis</h3>
+        <p><strong>Problem Statement:</strong> Traffic capture revealed sensitive data transmitted in plaintext over HTTP.</p>
+        <p><strong>Approach:</strong> Loaded PCAP file in Wireshark, followed HTTP streams to recover directory paths and files, and extracted flag information directly from the capture.</p>
+        <p><strong>Tools Used:</strong> Wireshark, Tshark</p>
+        <p><strong>Key Lessons:</strong></p>
+        <ul>
+          <li>Dangers of transmitting data without encryption</li>
+          <li>How to analyze and reconstruct data from packet captures</li>
+          <li>Need to enforce HTTPS and secure transport protocols</li>
+        </ul>
+      </article>
+
+      <article class="challenge">
+        <h3>Brute Force & Password Cracking</h3>
         <p><strong>Problem Statement:</strong> Faced a weakly protected login portal requiring password discovery.</p>
         <p><strong>Approach:</strong> Captured login requests, then used Hydra and JohnTheRipper to brute force weak credentials.</p>
         <p><strong>Tools Used:</strong> Hydra, JohnTheRipper, Burp Suite</p>
@@ -202,9 +107,10 @@
           <li>Strong password management strategies</li>
         </ul>
       </article>
+
       <article class="challenge">
         <h3>Leviathan CTF (Capture The Flag)</h3>
-        <p><strong>Problem Statement:</strong> Participate in the Leviathan CTF game focusing on web, crypto, and forensics challenges to capture flags and score points.</p>
+        <p><strong>Problem Statement:</strong> Participated in the Leviathan CTF game focusing on web, crypto, and forensics challenges to capture flags and score points.</p>
         <p><strong>Approach:</strong> Solved progressive tasks across categories — started with reconnaissance, moved to exploit development, and finished with forensic artifact recovery. Documented each flag and reproduction steps.</p>
         <p><strong>Tools Used:</strong> Burp Suite, Ghidra, binwalk, strings, Python (for automation), Volatility</p>
         <p><strong>Key Lessons:</strong></p>
@@ -213,12 +119,11 @@
           <li>Systematic recon and note-taking speeds up teamwork</li>
           <li>How to safely extract and validate forensic artifacts</li>
         </ul>
-  
       </article>
 
       <article class="challenge">
         <h3>Natas Wars (Web Wargame)</h3>
-        <p><strong>Problem Statement:</strong> Complete web-based wargame levels from Natas Wars to practice input validation, authentication bypasses, and basic cryptography.</p>
+        <p><strong>Problem Statement:</strong> Completed web-based wargame levels from Natas Wars to practice input validation, authentication bypasses, and basic cryptography.</p>
         <p><strong>Approach:</strong> Progressed through levels using manual testing and small scripts; catalogued common vulnerability patterns and crafted safe, repeatable exploits for lab learning.</p>
         <p><strong>Tools Used:</strong> Browser DevTools, curl, Burp Suite, Python (requests), SQLmap </p>
         <p><strong>Key Lessons:</strong></p>
@@ -227,7 +132,6 @@
           <li>Safe experimentation practices for learning (isolated lab environments)</li>
           <li>How to write concise exploit scripts for repeatable testing</li>
         </ul>
-      
       </article>
 
     </div>
@@ -237,5 +141,3 @@
   </footer>
 </body>
 </html>
-
-
