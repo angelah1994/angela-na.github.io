@@ -1,4 +1,9 @@
 /* ===============================
+   SAFETY CHECK: If you see a red line at the top, the file is working!
+================================ */
+body { border-top: 4px solid #38bdf8; }
+
+/* ===============================
    1. GLOBAL RESET & BASE
 ================================ */
 * {
@@ -8,7 +13,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   background: radial-gradient(circle at top, #0f172a 0%, #020617 100%);
   color: #e2e8f0;
   line-height: 1.6;
@@ -22,140 +27,108 @@ body {
 ================================ */
 .navbar {
   width: 100%;
-  background: rgba(2, 6, 23, 0.9);
-  backdrop-filter: blur(8px);
+  background: #020617;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 20px 5%;
   border-bottom: 1px solid #1e293b;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: bold;
   color: #38bdf8;
-  letter-spacing: 1px;
 }
 
 .nav-links a {
   color: #cbd5e1;
   text-decoration: none;
-  margin-left: 2rem;
-  font-weight: 500;
+  margin-left: 25px;
   transition: 0.3s;
 }
 
-.nav-links a:hover {
-  color: #38bdf8;
-}
+.nav-links a:hover { color: #38bdf8; }
 
 /* ===============================
-   3. THE MAIN LAYOUT (SIDE-BY-SIDE)
+   3. THE LAYOUT (THE FIX)
 ================================ */
 .about-section {
   flex: 1;
-  display: flex;         /* Activates Flexbox */
-  flex-direction: row;   /* Forces items to stay side-by-side */
-  gap: 2rem;             /* Space between Sidebar and Content */
-  max-width: 1200px;     /* Prevents site from becoming too wide */
-  width: 90%;
-  margin: 3rem auto;     /* Centers the container on the screen */
+  display: flex;         /* This turns on the side-by-side mode */
+  flex-direction: row;   /* Forces items to stay in a row */
+  gap: 30px;             /* Space between left and right */
+  max-width: 1200px;
+  width: 95%;            /* Ensures it stays wide enough */
+  margin: 40px auto;
   align-items: flex-start;
 }
 
 /* LEFT COLUMN (The Sidebar) */
 .left-column {
-  flex: 0 0 320px;       /* Fixed width: Won't grow or shrink */
+  flex: 0 0 320px;       /* Sidebar stays exactly 320px wide */
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 30px;
 }
 
-/* RIGHT COLUMN (About Me Content) */
+/* RIGHT COLUMN (The Main Content) */
 .about-text {
-  flex: 1;               /* Fills the remaining available space */
+  flex: 1;               /* Tells About Me to take all the right-side space */
+  background: #020c1b;
+  border: 1px solid #1e293b;
+  padding: 30px;
+  border-radius: 14px;
 }
 
 /* ===============================
-   4. CARD STYLING
+   4. CARD STYLES
 ================================ */
-.profile-card,
-.certifications-card,
-.about-text {
-  background: #0f172a;
+.profile-card, .certifications-card {
+  background: #020c1b;
   border: 1px solid #1e293b;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-}
-
-/* Profile specific styles */
-.profile-card {
+  padding: 25px;
+  border-radius: 14px;
   text-align: center;
 }
 
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: 3px solid #38bdf8;
   object-fit: cover;
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
 }
 
 .tagline {
   color: #94a3b8;
-  font-style: italic;
-  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
 }
 
-/* Typography */
-h2 {
-  color: #38bdf8;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-h3 {
-  color: #7dd3fc;
-  margin-top: 1.5rem;
-}
-
-ul {
-  padding-left: 1.2rem;
-  color: #cbd5e1;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
+.certifications-card { text-align: left; }
+.certifications-card h2 { color: #38bdf8; margin-bottom: 15px; }
+.certifications-card ul { padding-left: 20px; font-size: 0.95rem; }
 
 /* ===============================
    5. FOOTER
 ================================ */
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 20px;
   background: #020617;
-  color: #64748b;
+  color: #94a3b8;
   border-top: 1px solid #1e293b;
 }
 
 /* ===============================
-   6. RESPONSIVENESS (MOBILE)
+   6. MOBILE VIEW
 ================================ */
 @media (max-width: 900px) {
   .about-section {
-    flex-direction: column; /* Stacks vertically on small screens */
+    flex-direction: column; /* Stacks vertically on phones */
     align-items: center;
   }
-
-  .left-column, .about-text {
-    width: 100%;
-    max-width: 100%;
-  }
+  .left-column { width: 100%; max-width: 400px; }
 }
