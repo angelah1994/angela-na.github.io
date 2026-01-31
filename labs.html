@@ -4,26 +4,221 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Angela Wafula | Lab Challenges</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
     * {margin:0;padding:0;box-sizing:border-box;}
-    body {font-family: Arial, sans-serif;background:#f7f7f7;color:#333;min-height:100vh;display:flex;flex-direction:column;}
-    header.site-header {display:flex;justify-content:space-between;align-items:center;padding:15px 40px;background-color:black;color:white;flex-wrap:wrap;}
+    
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0%, #020617 100%);
+      color: #e2e8f0;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+    
+    /* Header */
+    header.site-header {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 5%;
+      background: #020617;
+      border-bottom: 1px solid #1e293b;
+      flex-wrap:wrap;
+    }
+    
     .header-info {max-width:60%;}
-    .header-info h1 {font-size:1.8rem;margin-bottom:0.2em;}
-    .header-info p {font-size:1.1rem;font-weight:300;}
-    nav.site-nav {display:flex;gap:20px;flex-wrap:wrap;justify-content:flex-end;min-width:300px;}
-    nav.site-nav a {color:white;text-decoration:none;font-weight:600;font-size:1rem;padding:8px 15px;transition:color 0.3s ease;}
-    nav.site-nav a:hover,nav.site-nav a.active {color:#ffd600;}
-    main {flex:1 0 auto;max-width:1080px;margin:30px auto 40px;background:white;padding:30px 40px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.1);}
-    main h2 {color:#003366;margin-bottom:20px;font-size:2rem;text-align:center;}
-    main p.intro {margin-bottom:30px;font-size:1.1rem;line-height:1.6;text-align:center;}
-    .challenge-container {display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;}
-    article.challenge {flex:1 1 calc(50% - 30px);background:#fafafa;border-radius:10px;padding:20px;box-shadow:0 3px 8px rgba(0,0,0,0.1);display:flex;flex-direction:column;}
-    article.challenge h3 {color:#00509e;margin-bottom:10px;font-size:1.5rem;}
-    article.challenge p {margin:0.3em 0 0.8em 0;line-height:1.5;}
-    article.challenge ul {list-style-type:disc;padding-left:20px;margin-top:0;color:#444;}
-    footer.site-footer {flex-shrink:0;background:black;color:white;text-align:center;padding:18px 40px;font-size:0.9rem;}
-    @media (max-width:900px){article.challenge{flex:1 1 100%;}main{padding:20px;max-width:90%;}header.site-header{flex-direction:column;align-items:flex-start;}.header-info{max-width:100%;margin-bottom:15px;}nav.site-nav{min-width:100%;justify-content:flex-start;gap:15px;}}
+    .header-info h1 {
+      font-size:1.8rem;
+      margin-bottom:0.2em;
+      color: #38bdf8;
+    }
+    
+    .header-info p {
+      font-size:1.1rem;
+      font-weight:300;
+      color: #94a3b8;
+    }
+    
+    /* Navigation */
+    nav.site-nav {
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      min-width:300px;
+    }
+    
+    nav.site-nav a {
+      color: #cbd5e1;
+      text-decoration:none;
+      font-weight:600;
+      font-size:1rem;
+      padding:8px 16px;
+      border-radius:6px;
+      transition: all 0.3s ease;
+    }
+    
+    nav.site-nav a:hover {
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+    }
+    
+    nav.site-nav a.active {
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.15);
+    }
+    
+    /* Main Content */
+    main {
+      flex:1 0 auto;
+      max-width:1080px;
+      margin:40px auto;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      padding:30px;
+      border-radius:12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      width: 95%;
+    }
+    
+    main h2 {
+      color: #38bdf8;
+      margin-bottom:20px;
+      font-size:2rem;
+      text-align:center;
+    }
+    
+    main p.intro {
+      margin-bottom:30px;
+      font-size:1.1rem;
+      line-height:1.6;
+      text-align:center;
+      color: #cbd5e1;
+    }
+    
+    /* Challenge Cards */
+    .challenge-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap:30px;
+      justify-content:space-between;
+    }
+    
+    article.challenge {
+      flex:1 1 calc(50% - 30px);
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid #1e293b;
+      border-radius:10px;
+      padding:25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      display:flex;
+      flex-direction:column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    article.challenge:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.2);
+      border-color: #38bdf8;
+    }
+    
+    article.challenge h3 {
+      color: #7dd3fc;
+      margin-bottom:15px;
+      font-size:1.5rem;
+      border-bottom: 2px solid #1e293b;
+      padding-bottom: 10px;
+    }
+    
+    article.challenge p {
+      margin:0.5em 0 1em 0;
+      line-height:1.6;
+      color: #cbd5e1;
+    }
+    
+    article.challenge p strong {
+      color: #7dd3fc;
+    }
+    
+    article.challenge ul {
+      list-style-type: none;
+      padding-left:0;
+      margin-top:10px;
+      color: #94a3b8;
+    }
+    
+    article.challenge li {
+      margin-bottom:8px;
+      padding-left:20px;
+      position:relative;
+      line-height:1.5;
+    }
+    
+    article.challenge li:before {
+      content: "•";
+      color: #38bdf8;
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+    }
+    
+    /* Footer */
+    footer.site-footer {
+      flex-shrink:0;
+      background: #020617;
+      color: #64748b;
+      text-align:center;
+      padding:25px 5%;
+      border-top: 1px solid #1e293b;
+      font-size:0.9rem;
+      margin-top: 40px;
+    }
+    
+    /* Responsive */
+    @media (max-width:900px){
+      article.challenge {
+        flex:1 1 100%;
+      }
+      
+      main {
+        padding:20px;
+        max-width:90%;
+        margin: 25px auto;
+      }
+      
+      header.site-header {
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      
+      .header-info {
+        max-width:100%;
+        margin-bottom:15px;
+      }
+      
+      nav.site-nav {
+        min-width:100%;
+        justify-content:flex-start;
+        gap:15px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .header-info h1 {
+        font-size: 1.6rem;
+      }
+      
+      .header-info p {
+        font-size: 1rem;
+      }
+      
+      nav.site-nav a {
+        padding: 6px 12px;
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -40,9 +235,11 @@
       <a href="contacts.html">Get in Touch</a>
     </nav>
   </header>
+  
   <main>
     <h2>Lab Challenges</h2>
     <p class="intro">Hands-on cybersecurity challenges demonstrating practical skills in various security domains.</p>
+    
     <div class="challenge-container">
       <article class="challenge">
         <h3>Web Application SQL Injection (Web Security)</h3>
@@ -120,7 +317,7 @@
           <li>Systematic recon and note-taking speeds up teamwork</li>
           <li>How to safely extract and validate forensic artifacts</li>
         </ul>
-      </article>$1
+      </article>
 
       <article class="challenge">
         <h3>Bandit Wargame (OverTheWire)</h3>
@@ -134,12 +331,11 @@
           <li>Importance of methodical problem solving and documenting commands used per level</li>
         </ul>
       </article>
-
     </div>
   </main>
+  
   <footer class="site-footer">
     <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
   </footer>
 </body>
 </html>
-
