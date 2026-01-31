@@ -4,147 +4,322 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Angela Wafula | Resume</title>
+  <link rel="stylesheet" href="styles.css" /> <!-- Link to your main stylesheet -->
   <style>
-    /* Reset */
+    /* Resume-specific styles matching home page theme */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+    
     body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #333;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0%, #020617 100%);
+      color: #e2e8f0;
+      line-height: 1.6;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
-    /* Header */
+    
+    /* Resume Header */
     header.resume-header {
-      padding: 20px 40px 15px;
-      background-color: black;
-      color: white;
+      padding: 25px 5% 20px;
+      background: #020617;
+      border-bottom: 1px solid #1e293b;
+      text-align: center;
       flex-shrink: 0;
     }
+    
     header.resume-header h1 {
-      font-size: 2rem;
-      margin-bottom: 5px;
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+      color: #38bdf8;
+      font-weight: 700;
     }
+    
     header.resume-header .title {
-      font-weight: 300;
-      font-size: 1.2rem;
-      color: #ddd;
+      font-size: 1.3rem;
+      color: #94a3b8;
+      margin-bottom: 15px;
+      font-weight: 400;
     }
-    /* Navbar */
-    nav.resume-nav {
-      background-color: black;
+    
+    .contact-info {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
       display: flex;
-      gap: 25px;
-      padding: 10px 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .contact-info span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    /* Resume Navigation */
+    nav.resume-nav {
+      background: #0f172a;
+      border-bottom: 1px solid #1e293b;
+      display: flex;
+      justify-content: center;
+      padding: 15px 5%;
+      gap: 30px;
       flex-shrink: 0;
     }
+    
     nav.resume-nav a {
-      color: white;
+      color: #cbd5e1;
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
-      padding: 8px 15px;
-      transition: color 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
     }
-    nav.resume-nav a:hover,
+    
+    nav.resume-nav a:hover {
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+    }
+    
     nav.resume-nav a.active {
-      color: #ffd600;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.15);
     }
-    /* Main content */
+    
+    /* Main Resume Content */
     main.resume-container {
       flex: 1 0 auto;
-      max-width: 960px;
-      margin: 30px auto 40px;
-      background: white;
-      padding: 30px 40px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      width: 95%;
+    }
+    
+    /* Resume Sections */
+    .resume-section {
+      background: #0f172a;
+      border: 1px solid #1e293b;
       border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
-    main.resume-container h2 {
-      color: #003366;
-      margin-bottom: 20px;
-      font-size: 2rem;
+    
+    .resume-section h2 {
+      color: #38bdf8;
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #1e293b;
     }
+    
+    /* Professional Summary */
+    .summary p {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+    
     /* Work Experience */
     .work-experience .job {
-      margin-bottom: 30px;
+      margin-bottom: 35px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #1e293b;
     }
+    
+    .work-experience .job:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
     .work-experience h3 {
-      color: #00509e;
+      color: #7dd3fc;
       font-size: 1.4rem;
-      margin-bottom: 5px;
-    }
-    .company-location, .dates {
-      font-style: italic;
-      color: #666;
       margin-bottom: 8px;
     }
-    .work-experience ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      color: #444;
-      line-height: 1.5;
+    
+    .company-location {
+      color: #94a3b8;
+      font-weight: 500;
+      margin-bottom: 5px;
+      font-size: 1.1rem;
     }
+    
+    .dates {
+      color: #64748b;
+      font-style: italic;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+    
+    .work-experience ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    .work-experience li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+    
+    .work-experience li:before {
+      content: "•";
+      color: #38bdf8;
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+    }
+    
     /* Education */
     .education .education-item {
       margin-bottom: 25px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #1e293b;
     }
+    
+    .education .education-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
     .education h3 {
-      color: #00509e;
-      font-size: 1.4rem;
-      margin-bottom: 5px;
+      color: #7dd3fc;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
     }
+    
     .education p {
-      color: #555;
-      font-style: normal;
-      margin-bottom: 6px;
-      line-height: 1.4;
+      color: #cbd5e1;
+      margin-bottom: 5px;
+      line-height: 1.5;
     }
+    
     /* Skills */
     .skills ul {
       list-style-type: none;
       padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
     }
+    
     .skills li {
-      margin-bottom: 12px;
-      line-height: 1.5;
-      font-size: 1rem;
-      color: #444;
+      background: rgba(30, 41, 59, 0.5);
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #38bdf8;
+      color: #cbd5e1;
+      line-height: 1.6;
     }
+    
     .skills strong {
-      color: #003366;
+      color: #7dd3fc;
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
     }
-    /* Footer (optional if you want same style) */
+    
+    /* Certifications */
+    .certifications ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    .certifications li {
+      margin-bottom: 12px;
+      padding-left: 20px;
+      position: relative;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+    
+    .certifications li:before {
+      content: "✓";
+      color: #38bdf8;
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    
+    /* Languages */
+    .languages p {
+      color: #cbd5e1;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    
+    /* Footer */
     footer.site-footer {
       flex-shrink: 0;
-      background: black;
-      color: white;
+      background: #020617;
+      color: #64748b;
       text-align: center;
-      padding: 18px 40px;
+      padding: 25px 5%;
+      border-top: 1px solid #1e293b;
       font-size: 0.9rem;
-      margin-top: auto;
+      margin-top: 40px;
     }
-    /* Responsive adjustments */
-    @media (max-width: 700px) {
-      header.resume-header, nav.resume-nav {
-        padding: 15px 20px;
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header.resume-header h1 {
+        font-size: 2rem;
       }
-      main.resume-container {
-        margin: 20px 15px 40px;
-        padding: 20px 20px;
-        max-width: 95%;
+      
+      .contact-info {
+        flex-direction: column;
+        gap: 8px;
       }
+      
       nav.resume-nav {
-        gap: 12px;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 12px 5%;
       }
+      
       nav.resume-nav a {
-        padding: 8px 10px;
-        font-size: 0.9rem;
+        padding: 8px 12px;
+        font-size: 0.95rem;
+      }
+      
+      .resume-section {
+        padding: 20px;
+      }
+      
+      .skills ul {
+        grid-template-columns: 1fr;
+      }
+      
+      main.resume-container {
+        padding: 0 15px;
+        margin: 25px auto;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      header.resume-header {
+        padding: 20px 15px;
+      }
+      
+      .resume-section h2 {
+        font-size: 1.6rem;
+      }
+      
+      .work-experience h3,
+      .education h3 {
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -152,84 +327,161 @@
 <body>
   <header class="resume-header">
     <h1>Angela Wafula</h1>
-    <p class="title">ICT Officer • Cybersecurity Enthusiast • Data Analyst • Data Science</p>
+    <p class="title">ICT Associate | Systems Support | Data & Digital Platforms</p>
+    <div class="contact-info">
+      <span>📧 wafulaangelah@yahoo.com</span>
+      <span>📱 +254722624649</span>
+      <span>📍 Nairobi, Kenya</span>
+      <span>🔗 linkedin.com/in/angela-wafula</span>
+    </div>
   </header>
+  
   <nav class="resume-nav">
     <a href="index.html">Home</a>
     <a href="resume.html" class="active">Resume</a>
     <a href="labs.html">Lab Challenges</a>
     <a href="contacts.html">Get in Touch</a>
   </nav>
+  
   <main class="resume-container">
-    <section class="work-experience">
+    <!-- Professional Summary -->
+    <section class="resume-section summary">
+      <h2>Professional Summary</h2>
+      <p>ICT and Data Systems Professional with a Bachelor's degree in Computer Security and Forensics and over 4 years of experience in ICT support, systems administration, digital platforms, and data management. Proven ability to provide user support, maintain web-based systems, manage databases, and support data-driven reporting. Experienced in Office 365 environments, system documentation, troubleshooting, and digital content management. Passionate about enabling efficient, secure, and user-friendly ICT solutions to support organizational operations and development programmes.</p>
+    </section>
+    
+    <!-- Work Experience -->
+    <section class="resume-section work-experience">
       <h2>Work Experience</h2>
+      
       <div class="job">
-        <h3>IT Support Officer</h3>
+        <h3>Team Lead – Office 365 & Service Desk (Volunteer, Remote)</h3>
+        <p class="company-location">Carifika Global</p>
+        <p class="dates">2025 – Present</p>
+        <ul>
+          <li>Leading a remote team responsible for setting up and managing an Office 365–based Service Desk to support organizational IT operations.</li>
+          <li>Designing and implementing Service Desk workflows using Microsoft 365 tools (Outlook, Teams, SharePoint) for ticket intake, tracking, and resolution.</li>
+          <li>Managing user accounts, licenses, and access controls across Office 365 services, ensuring least-privilege access and security best practices.</li>
+          <li>Developing IT support processes, escalation procedures, and service documentation to improve response times and service quality.</li>
+          <li>Coordinating remotely with stakeholders to gather requirements, prioritize issues, and ensure smooth IT service delivery.</li>
+          <li>Mentoring team members and promoting clear communication, accountability, and effective remote collaboration.</li>
+        </ul>
+      </div>
+      
+      <div class="job">
+        <h3>IT Support Officer Intern</h3>
         <p class="company-location">State Department of Economic Planning • Nairobi, Kenya</p>
         <p class="dates">2023 – 2024</p>
         <ul>
-          <li>Delivered hands-on technical support to end users, diagnosing and resolving diverse IT issues with emphasis on timely resolution and minimal disruption to operations.</li>
-          <li>Communicated technical concepts in clear, simple terms to non-technical users, reducing repeat support requests.</li>
-          <li>Troubleshot network connectivity problems, collaborating with colleagues to isolate root causes, resulting in a 30% reduction in downtime.</li>
-          <li>Managed installation, configuration, and maintenance of computers, printers, and peripherals, ensuring optimal performance and security compliance.</li>
-          <li>Performed regular software installations, upgrades, and patch management to maintain system stability and reduce vulnerabilities.</li>
-          <li>Coordinated wireless access point setup for a large department, improving user satisfaction.</li>
-          <li>Monitored system performance and network health using diagnostic tools to proactively identify issues.</li>
-          <li>Documented technical procedures and solutions in a knowledge base to streamline future support and train new IT staff.</li>
-          <li>Assisted in user onboarding by creating accounts, setting permissions, and providing IT orientation sessions.</li>
+          <li>Delivered hands-on technical support to end users, diagnosing and resolving diverse IT issues</li>
+          <li>Provided daily ICT support for web-based systems, desktop applications, and networks.</li>
+          <li>Troubleshot hardware, software, and connectivity issues for end users.</li>
+          <li>Installed, configured, and maintained computers, printers, and peripherals.</li>
+          <li>Supported system updates, patch management, and security compliance.</li>
+          <li>Monitored system performance and network stability.</li>
+          <li>Documented ICT procedures and maintained a knowledge base.</li>
+          <li>Supported user onboarding, access management, and training.</li>
         </ul>
       </div>
+      
       <div class="job">
         <h3>Digital Literacy Program Officer</h3>
         <p class="company-location">Ministry of Education • Bungoma, Kenya</p>
         <p class="dates">2021 – 2022</p>
         <ul>
-          <li>Facilitated integration of ICT into teaching and learning, enhancing digital literacy among educators and learners aligned with curriculum goals.</li>
-          <li>Managed and updated learner records on the NEMIS portal to maintain accurate data.</li>
-          <li>Delivered teacher workshops on effective use of digital devices and tools for lesson delivery and content creation.</li>
-          <li>Provided in-classroom ICT support, assisting educators with technology setup and troubleshooting.</li>
-          <li>Developed step-by-step guides to help teachers create and share digital learning materials independently.</li>
+          <li>Supported digital platforms and learning management systems in schools.</li>
+          <li>Maintained and validated data in the NEMIS portal.</li>
+          <li>Delivered ICT training and user support to educators.</li>
+          <li>Developed step-by-step technical guides and learning resources.</li>
+          <li>Assisted in integrating digital tools into teaching and reporting processes</li>
         </ul>
       </div>
+      
       <div class="job">
         <h3>ICT Intern</h3>
-        <p class="company-location">Konza • Konza City, Kenya</p>
+        <p class="company-location">Konza • Konza city, Kenya</p>
         <p class="dates">2019 – 2020</p>
         <ul>
-          <li>Provided end-user technical support, resolving hardware, software, and connectivity issues to minimize downtime.</li>
-          <li>Supported ERP implementation including user training, troubleshooting, and post-go-live assistance.</li>
-          <li>Managed and supported office ICT functions, including Office 365, SharePoint, Power BI, and an Electronic Document Management System.</li>
-          <li>Diagnosed and resolved network problems to ensure secure connectivity.</li>
-          <li>Administered Active Directory including user and group management and access permissions.</li>
-          <li>Setup and maintained hardware ensuring compliance with IT standards.</li>
-          <li>Monitored and deployed ICT resources to optimize asset management.</li>
-          <li>Maintained and updated the company website ensuring optimal performance.</li>
+          <li>Provided technical support for staff and project teams</li>
+          <li>Supported ERP systems, Office 365, SharePoint, Power BI, and EDMS platforms.</li>
+          <li>Maintained structured databases and supported reporting tools.</li>
+          <li>Administered Active Directory and access permissions.</li>
+          <li>Maintained organizational website and digital content.</li>
+          <li>Assisted with ICT asset management and system monitoring.</li>
         </ul>
       </div>
     </section>
-    <section class="education">
+    
+    <!-- Education -->
+    <section class="resume-section education">
       <h2>Education</h2>
+      
       <div class="education-item">
         <h3>Bachelor of Science in Computer Security and Forensics</h3>
         <p>Jaramogi Oginga Odinga University of Science and Technology, Bondo, Kenya</p>
         <p>Graduated: 2017 – Second Class Honors, Upper Division</p>
       </div>
+      
       <div class="education-item">
         <h3>Kenya Certificate of Secondary Education (KCSE)</h3>
         <p>St. Cecilia Girls High School, Misikhu, Kenya</p>
         <p>Graduated: 2011 – Grade: B</p>
       </div>
     </section>
-    <section class="skills">
+    
+    <!-- Skills -->
+    <section class="resume-section skills">
       <h2>Skills</h2>
       <ul>
-        <li><strong>ICT Support & Systems:</strong> Technical Support, Helpdesk Operations, User Training, ERP Implementation, Office 365 (Outlook, Teams, OneDrive, SharePoint), EDMS, IT Asset Management</li>
-        <li><strong>Systems & Network Administration:</strong> Active Directory (User/Group Management, GPO), Wireless Configuration, Software Installation & Patch Management, Network Security</li>
-        <li><strong>Programming & Data Tools:</strong> Python, SQL, R, Database Management, Power BI</li>
-        <li><strong>Cybersecurity & Tools:</strong> Vulnerability Assessment, Penetration Testing, Web App Security (OWASP Top 10), Nmap, Wireshark, Metasploit, Burp Suite, John the Ripper, Aircrack-ng, Hydra, Nikto, Dig, Enum4linux, SMBclient</li>
+        <li>
+          <strong>ICT & Systems:</strong>
+          Helpdesk support, user training, Office 365, EDMS, ERP, asset management
+        </li>
+        <li>
+          <strong>Networks & Security:</strong>
+          Active Directory, access control, wireless/network setup, patch management, vulnerability assessment
+        </li>
+        <li>
+          <strong>Web & Data:</strong>
+          HTML, CMS/WordPress, Python, SQL, Power BI, database management, data cleaning & reporting
+        </li>
+        <li>
+          <strong>Cybersecurity:</strong>
+          Network & web security monitoring, risk assessment, security compliance
+        </li>
       </ul>
     </section>
+    
+    <!-- Cybersecurity Projects -->
+    <section class="resume-section">
+      <h2>Cybersecurity Projects (Training & Labs)</h2>
+      <ul class="work-experience" style="border: none; padding: 0;">
+        <li>Conducted system testing and security assessments on web applications and networks.</li>
+        <li>Performed data validation and analysis for reporting purposes</li>
+        <li>Supported dashboard and reporting tools using Power BI and databases.</li>
+        <li>Documented technical findings and system improvement recommendations.</li>
+      </ul>
+    </section>
+    
+    <!-- Certifications -->
+    <section class="resume-section certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Certified Ethical Hacker (CEH) – Cyber Shujaa, August 2025</li>
+        <li>Certified Network Security Specialist (CNSS) – International Cybersecurity Institute (ID: 17852723), Mar 2020</li>
+        <li>Introduction to Network Operations (Unix, Linux, Networking, DNS) – Internet Society of Kenya, Sep 2019</li>
+        <li>Cybersecurity Awareness Course – Kenya Education Network (KENET), Dec 2019</li>
+      </ul>
+    </section>
+    
+    <!-- Languages -->
+    <section class="resume-section languages">
+      <h2>Languages</h2>
+      <p>• <strong>English:</strong> Advanced (Fluent)</p>
+      <p>• <strong>Kiswahili:</strong> Native</p>
+    </section>
   </main>
+  
   <footer class="site-footer">
     <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
   </footer>
