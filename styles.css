@@ -1,201 +1,225 @@
-/* General */
-html {
-  font-size: 18px; /* Base font size */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* Root */
+:root {
+  --primary: #0a2540;
+  --accent: #00c2ff;
+  --light-bg: #f4f7fb;
+  --card-bg: #ffffff;
+  --text-dark: #1f2933;
+  --text-light: #6b7280;
+}
+
+/* Body */
 body {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
-  color: #333;
-  line-height: 1.6;
+  font-family: "Inter", Arial, sans-serif;
+  background: linear-gradient(135deg, #f4f7fb, #e9f2ff);
+  color: var(--text-dark);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  padding: 0 10px;
-  font-size: 1rem; /* 18px */
+  line-height: 1.7;
 }
+
 
 /* Navbar */
 .navbar {
+  background: linear-gradient(90deg, #0a2540, #020c1b);
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: black;
-  color: white;
-  padding: 12px 40px;
-  flex-shrink: 0;
+  padding: 15px 50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.navbar .logo {
-  font-size: 1.5rem; /* 27px */
-  font-weight: bold;
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-.navbar .nav-links a {
-  color: white;
+.nav-links a {
+  color: #e5e7eb;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 25px;
   font-weight: 500;
-  font-size: 1rem; /* 18px */
+  position: relative;
+  transition: 0.3s;
 }
 
-.navbar .nav-links a.active,
-.navbar .nav-links a:hover {
-  color: #ffd600;
+/* Underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background: var(--accent);
+  transition: 0.3s;
 }
 
-/* About Section Layout */
-.about-section {
-  flex: 1 0 auto; /* Grow to fill vertical space */
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 40px;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+.nav-links a:hover::after,
+.nav-links a.active::after {
   width: 100%;
-  box-sizing: border-box;
-  min-height: calc(100vh - 110px);
 }
 
-/* Left Column Container */
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent);
+}
+
+
+/* Layout */
+.about-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 40px;
+}
+
+
+/* Left Column */
 .left-column {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  flex-shrink: 0;
+  gap: 30px;
 }
 
-/* Profile Card */
+
+/* Cards */
+.profile-card,
+.certifications-card,
+.about-text {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.profile-card:hover,
+.certifications-card:hover,
+.about-text:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+
+/* Profile */
 .profile-card {
-  background: white;
-  padding: 25px;
-  width: 320px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   text-align: center;
-  font-size: 1rem; /* 18px */
 }
 
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  object-fit: cover;
+  border: 4px solid var(--accent);
   margin-bottom: 15px;
 }
 
 .profile-card h2 {
-  margin: 10px 0 5px;
-  font-size: 1.8rem; /* 32.4px */
+  font-size: 1.9rem;
+  margin-bottom: 5px;
 }
 
 .tagline {
-  font-style: italic;
-  color: #666;
+  color: var(--text-light);
+  font-size: 1rem;
   margin-bottom: 15px;
-  font-size: 1.25rem; /* 22.5px */
 }
 
-/* Certifications Card */
-.certifications-card {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  max-width: 320px;
-  color: #222;
-  font-size: 1rem; /* 18px */
+
+/* Social Icons */
+.footer-social {
+  margin-top: 15px;
 }
 
-.certifications-card h2 {
-  color: #003366;
-  margin-bottom: 16px;
-  font-weight: 700;
-  font-size: 1.5rem; /* 27px */
+.footer-social img {
+  width: 26px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.footer-social img:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+
+/* Certifications */
+.certifications-card h2,
+.about-text h2,
+.about-text h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
 }
 
 .certifications-card ul {
-  list-style-type: disc;
   padding-left: 20px;
 }
 
-.certifications-card ul li {
+.certifications-card li {
   margin-bottom: 10px;
-  font-size: 1rem; /* 18px */
-  color: #444;
+  color: #374151;
 }
 
-/* About Text */
-.about-text {
-  background: white;
-  padding: 25px;
-  flex: 1;
-  min-width: 0; /* prevent squashing */
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  line-height: 1.7;
-  font-size: 1rem; /* 18px */
-  max-width: 800px;
+
+/* About Section */
+.about-text p {
+  margin-bottom: 15px;
+  color: #374151;
 }
 
-.about-text h2 {
-  color: #003366;
-  margin-bottom: 20px;
-  font-size: 1.5rem; /* 27px */
+.about-text h3 {
+  margin-top: 25px;
 }
 
-/* Social Icons in Card */
-.footer-social {
-  margin-top: 20px;
-}
-
-.footer-social a img {
-  width: 28px;
-  margin: 0 8px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.footer-social a:hover img {
-  filter: brightness(1.2);
-  transform: scale(1.1);
-}
 
 /* Footer */
 footer {
-  background: black;
-  color: white;
+  background: #020c1b;
+  color: #cbd5e1;
   text-align: center;
-  padding: 15px;
-  margin: 0;
-  flex-shrink: 0;
-  font-size: 1rem; /* 18px */
+  padding: 18px;
+  margin-top: auto;
+  font-size: 0.95rem;
 }
+
 
 /* Responsive */
 @media (max-width: 900px) {
+
+  .navbar {
+    padding: 15px 25px;
+    flex-wrap: wrap;
+  }
+
   .about-section {
-    flex-direction: column;
-    padding: 20px;
+    grid-template-columns: 1fr;
+    margin: 30px auto;
   }
 
   .left-column {
-    flex-direction: column;
     align-items: center;
   }
 
   .profile-card,
   .certifications-card {
+    max-width: 420px;
     width: 100%;
-    max-width: 400px;
   }
 
-  .about-text {
-    width: 100%;
-    max-width: none;
-  }
 }
