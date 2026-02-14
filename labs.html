@@ -252,21 +252,58 @@
     </article>
 
     <article class="challenge">
-  <h3>Incident Response & Exploitation – H4cked (TryHackMe)</h3>
-  
-  <p><strong>Overview:</strong> Investigated a compromised Linux machine by analyzing captured network traffic, then reproduced the attack to validate findings and retrieve the system flag.</p>
-  
-  <p><strong>Execution:</strong> Examined Wireshark packet captures to identify suspicious login attempts and attacker behavior. Determined that weak credentials were used for SSH access. Reperformed the attack using Hydra to brute-force the password, successfully gained shell access, and located the flag within the system.</p>
-  
-  <p><strong>Tools Used:</strong> Wireshark, Hydra, SSH, Linux CLI (grep, cat, find)</p>
-  
+  <h3>Attack Analysis & Exploitation – H4cked (TryHackMe)</h3>
+
+  <p><strong>Overview:</strong> Analyzed captured network traffic to investigate a compromised Linux machine, then reproduced the attack chain to validate findings and successfully retrieve the system flag.</p>
+
+  <p><strong>Phase 1 – Network Traffic Analysis (Wireshark):</strong></p>
+  <p>Loaded and examined packet capture (PCAP) files in Wireshark to identify suspicious activity. Detected repeated FTP authentication attempts and observed credential brute-force behavior targeting a specific user account.</p>
   <ul>
-    <li>Identifying brute-force attempts through packet analysis</li>
-    <li>Using Hydra for credential attacks against SSH</li>
-    <li>Gaining and stabilizing shell access</li>
-    <li>Post-exploitation enumeration to locate sensitive files</li>
+    <li>Filtered FTP traffic</li>
+    <li>Identified failed and successful login attempts</li>
+    <li>Determined attack vector from captured packets</li>
+  </ul>
+
+  <p><strong>Phase 2 – Reconnaissance:</strong></p>
+  <p>Performed a full TCP port scan to identify open services and running versions.</p>
+  <p><em>Command:</em> nmap -A -T4 -Pn -p- [target IP]</p>
+
+  <p><strong>Phase 3 – Credential Brute Force:</strong></p>
+  <p>Reproduced the attack using Hydra to brute-force FTP credentials with the rockyou wordlist.</p>
+  <p><em>Command:</em> hydra -l jenny -P /usr/share/wordlists/rockyou.txt [target IP] ftp</p>
+
+  <p><strong>Phase 4 – Initial Access & Payload Deployment:</strong></p>
+  <p>Logged into FTP with recovered credentials, downloaded relevant files, and uploaded a reverse shell payload (shell.php).</p>
+  <ul>
+    <li>Used <em>get</em> to retrieve files</li>
+    <li>Used <em>put</em> to upload backdoor</li>
+  </ul>
+
+  <p><strong>Phase 5 – Reverse Shell & Stabilization:</strong></p>
+  <p>Started a Netcat listener before triggering the payload:</p>
+  <p><em>Command:</em> nc -lvnp 4444</p>
+
+  <p>Upgraded to an interactive TTY shell:</p>
+  <p><em>Command:</em> python3 -c 'import pty; pty.spawn("/bin/bash")'</p>
+
+  <p><strong>Phase 6 – Privilege Enumeration:</strong></p>
+  <p>Checked sudo permissions to determine available elevated access.</p>
+  <p><em>Command:</em> sudo -l</p>
+
+  <p><strong>Phase 7 – Flag Retrieval:</strong></p>
+  <p>Navigated the file system and successfully located <em>flag.txt</em>, completing the full exploitation lifecycle.</p>
+
+  <p><strong>Tools Used:</strong> Wireshark, Nmap, Hydra, FTP, Netcat, Linux CLI, Python (TTY upgrade)</p>
+
+  <ul>
+    <li>Packet-level brute-force detection and analysis</li>
+    <li>Full attack chain reproduction</li>
+    <li>Reverse shell deployment and stabilization</li>
+    <li>Privilege enumeration and post-exploitation navigation</li>
+    <li>Understanding attacker methodology from investigation to exploitation</li>
   </ul>
 </article>
+
 
 
   </div>
@@ -278,4 +315,5 @@
 
 </body>
 </html>
+
 
