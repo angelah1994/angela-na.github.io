@@ -252,17 +252,22 @@
     </article>
 
     <article class="challenge">
-      <h3>Incident Response – H4cked (TryHackMe)</h3>
-      <p><strong>Overview:</strong> Investigated a compromised Linux machine to determine attack vector and attacker activity.</p>
-      <p><strong>Execution:</strong> Analyzed authentication logs, bash history, and system artifacts to reconstruct the attack timeline and identify unauthorized SSH access.</p>
-      <p><strong>Tools:</strong> Linux CLI, Log Analysis Techniques</p>
-      <ul>
-        <li>Detection of brute-force indicators</li>
-        <li>Analysis of /var/log/auth.log</li>
-        <li>Attack timeline reconstruction</li>
-        <li>Incident response documentation</li>
-      </ul>
-    </article>
+  <h3>Incident Response & Exploitation – H4cked (TryHackMe)</h3>
+  
+  <p><strong>Overview:</strong> Investigated a compromised Linux machine by analyzing captured network traffic, then reproduced the attack to validate findings and retrieve the system flag.</p>
+  
+  <p><strong>Execution:</strong> Examined Wireshark packet captures to identify suspicious login attempts and attacker behavior. Determined that weak credentials were used for SSH access. Reperformed the attack using Hydra to brute-force the password, successfully gained shell access, and located the flag within the system.</p>
+  
+  <p><strong>Tools Used:</strong> Wireshark, Hydra, SSH, Linux CLI (grep, cat, find)</p>
+  
+  <ul>
+    <li>Identifying brute-force attempts through packet analysis</li>
+    <li>Using Hydra for credential attacks against SSH</li>
+    <li>Gaining and stabilizing shell access</li>
+    <li>Post-exploitation enumeration to locate sensitive files</li>
+  </ul>
+</article>
+
 
   </div>
 </main>
@@ -273,3 +278,4 @@
 
 </body>
 </html>
+
