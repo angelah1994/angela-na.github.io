@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Angela Wafula | Lab Challenges</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Angela Wafula | Cybersecurity Lab Portfolio</title>
+
   <style>
-    * {margin:0;padding:0;box-sizing:border-box;}
-    
+    * {
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
     body {
       font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: radial-gradient(circle at top, #0f172a 0%, #020617 100%);
@@ -16,326 +20,256 @@
       display:flex;
       flex-direction:column;
     }
-    
+
     /* Header */
-    header.site-header {
+    header {
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:15px 5%;
-      background: #020617;
-      border-bottom: 1px solid #1e293b;
+      padding:20px 5%;
+      background:#020617;
+      border-bottom:1px solid #1e293b;
       flex-wrap:wrap;
     }
-    
-    .header-info {max-width:60%;}
-    .header-info h1 {
-      font-size:1.8rem;
-      margin-bottom:0.2em;
-      color: #38bdf8;
+
+    header h1 {
+      color:#38bdf8;
+      font-size:1.9rem;
     }
-    
-    .header-info p {
-      font-size:1.1rem;
+
+    header p {
+      color:#94a3b8;
       font-weight:300;
-      color: #94a3b8;
+      margin-top:5px;
     }
-    
-    /* Navigation */
-    nav.site-nav {
+
+    nav {
       display:flex;
       gap:20px;
       flex-wrap:wrap;
-      justify-content:flex-end;
-      min-width:300px;
     }
-    
-    nav.site-nav a {
-      color: #cbd5e1;
+
+    nav a {
+      color:#cbd5e1;
       text-decoration:none;
       font-weight:600;
-      font-size:1rem;
-      padding:8px 16px;
+      padding:8px 14px;
       border-radius:6px;
-      transition: all 0.3s ease;
+      transition:all 0.3s ease;
     }
-    
-    nav.site-nav a:hover {
-      color: #38bdf8;
-      background: rgba(56, 189, 248, 0.1);
+
+    nav a:hover,
+    nav a.active {
+      color:#38bdf8;
+      background:rgba(56,189,248,0.15);
     }
-    
-    nav.site-nav a.active {
-      color: #38bdf8;
-      background: rgba(56, 189, 248, 0.15);
-    }
-    
-    /* Main Content */
+
+    /* Main */
     main {
-      flex:1 0 auto;
-      max-width:1080px;
+      flex:1;
+      max-width:1100px;
       margin:40px auto;
-      background: #0f172a;
-      border: 1px solid #1e293b;
-      padding:30px;
-      border-radius:12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      width: 95%;
+      padding:35px;
+      background:#0f172a;
+      border-radius:14px;
+      border:1px solid #1e293b;
+      box-shadow:0 15px 40px rgba(0,0,0,0.5);
+      width:95%;
     }
-    
+
     main h2 {
-      color: #38bdf8;
-      margin-bottom:20px;
-      font-size:2rem;
       text-align:center;
+      font-size:2rem;
+      color:#38bdf8;
+      margin-bottom:20px;
     }
-    
+
     main p.intro {
-      margin-bottom:30px;
+      text-align:center;
+      margin-bottom:35px;
+      color:#cbd5e1;
       font-size:1.1rem;
       line-height:1.6;
-      text-align:center;
-      color: #cbd5e1;
     }
-    
-    /* Challenge Cards */
+
     .challenge-container {
       display:flex;
       flex-wrap:wrap;
       gap:30px;
-      justify-content:space-between;
     }
-    
-    article.challenge {
+
+    .challenge {
       flex:1 1 calc(50% - 30px);
-      background: rgba(30, 41, 59, 0.5);
-      border: 1px solid #1e293b;
-      border-radius:10px;
+      background:rgba(30,41,59,0.6);
       padding:25px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      display:flex;
-      flex-direction:column;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius:12px;
+      border:1px solid #1e293b;
+      transition:all 0.3s ease;
     }
-    
-    article.challenge:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.2);
-      border-color: #38bdf8;
+
+    .challenge:hover {
+      transform:translateY(-6px);
+      border-color:#38bdf8;
+      box-shadow:0 8px 25px rgba(56,189,248,0.25);
     }
-    
-    article.challenge h3 {
-      color: #7dd3fc;
+
+    .challenge h3 {
+      color:#7dd3fc;
       margin-bottom:15px;
-      font-size:1.5rem;
-      border-bottom: 2px solid #1e293b;
-      padding-bottom: 10px;
+      border-bottom:2px solid #1e293b;
+      padding-bottom:10px;
     }
-    
-    article.challenge p {
-      margin:0.5em 0 1em 0;
+
+    .challenge p {
+      margin-bottom:12px;
       line-height:1.6;
-      color: #cbd5e1;
+      color:#cbd5e1;
     }
-    
-    article.challenge p strong {
-      color: #7dd3fc;
+
+    .challenge strong {
+      color:#7dd3fc;
     }
-    
-    article.challenge ul {
-      list-style-type: none;
-      padding-left:0;
+
+    .challenge ul {
+      list-style:none;
       margin-top:10px;
-      color: #94a3b8;
     }
-    
-    article.challenge li {
+
+    .challenge li {
       margin-bottom:8px;
       padding-left:20px;
       position:relative;
-      line-height:1.5;
+      color:#94a3b8;
     }
-    
-    article.challenge li:before {
-      content: "•";
-      color: #38bdf8;
-      position: absolute;
-      left: 0;
-      font-size: 1.2rem;
+
+    .challenge li::before {
+      content:"•";
+      position:absolute;
+      left:0;
+      color:#38bdf8;
     }
-    
-    /* Footer */
-    footer.site-footer {
-      flex-shrink:0;
-      background: #020617;
-      color: #64748b;
+
+    footer {
       text-align:center;
-      padding:25px 5%;
-      border-top: 1px solid #1e293b;
+      padding:25px;
+      background:#020617;
+      border-top:1px solid #1e293b;
+      color:#64748b;
       font-size:0.9rem;
-      margin-top: 40px;
     }
-    
-    /* Responsive */
-    @media (max-width:900px){
-      article.challenge {
+
+    @media (max-width:900px) {
+      .challenge {
         flex:1 1 100%;
-      }
-      
-      main {
-        padding:20px;
-        max-width:90%;
-        margin: 25px auto;
-      }
-      
-      header.site-header {
-        flex-direction:column;
-        align-items:flex-start;
-      }
-      
-      .header-info {
-        max-width:100%;
-        margin-bottom:15px;
-      }
-      
-      nav.site-nav {
-        min-width:100%;
-        justify-content:flex-start;
-        gap:15px;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .header-info h1 {
-        font-size: 1.6rem;
-      }
-      
-      .header-info p {
-        font-size: 1rem;
-      }
-      
-      nav.site-nav a {
-        padding: 6px 12px;
-        font-size: 0.95rem;
       }
     }
   </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="header-info">
-      <h1>Angela Wafula</h1>
-      <p>ICT Officer • Cybersecurity Enthusiast • Data Analyst • Data Science</p>
-    </div>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="resume.html">Resume</a>
-      <a href="labs.html" class="active">Lab Challenges</a>
-      <a href="contacts.html">Get in Touch</a>
-    </nav>
-  </header>
-  
-  <main>
-    <h2>Lab Challenges</h2>
-    <p class="intro">Hands-on cybersecurity challenges demonstrating practical skills in various security domains.</p>
-    
-    <div class="challenge-container">
-      <article class="challenge">
-        <h3>Web Application SQL Injection (Web Security)</h3>
-        <p><strong>Problem Statement:</strong> A vulnerable web application with a login form was susceptible to SQL injection. The task was to bypass authentication and retrieve sensitive data.</p>
-        <p><strong>Approach:</strong> Tested manually with payloads, confirmed vulnerability, then automated extraction with SQLmap. Retrieved user data, cracked a password hash with John the Ripper, and used credentials to access a restricted host.</p>
-        <p><strong>Tools Used:</strong> Burp Suite, SQLmap, JohnTheRipper, Browser DevTools</p>
-        <p><strong>Key Lessons:</strong></p>
-        <ul>
-          <li>Importance of parameterized queries in web applications</li>
-          <li>Manual and automated SQL injection testing</li>
-          <li>Secure coding practices to mitigate SQLi</li>
-        </ul>
-      </article>
 
-      <article class="challenge">
-        <h3>Web Server Directory Enumeration</h3>
-        <p><strong>Problem Statement:</strong> A misconfigured web server allowed directory listing and exposure of sensitive files.</p>
-        <p><strong>Approach:</strong> Conducted reconnaissance with Gobuster and manual URL manipulation to discover open directories. Located and retrieved a hidden HTML file containing a flag.</p>
-        <p><strong>Tools Used:</strong> Gobuster, Dirb, Browser</p>
-        <p><strong>Key Lessons:</strong></p>
-        <ul>
-          <li>Risks of directory indexing</li>
-          <li>How to prevent accidental data exposure</li>
-          <li>Importance of secure web server configuration</li>
-        </ul>
-      </article>
+<header>
+  <div>
+    <h1>Angela Wafula</h1>
+    <p>ICT Officer • Cybersecurity Analyst • Data Analyst • Data Science Enthusiast</p>
+  </div>
 
-      <article class="challenge">
-        <h3>SMB Share Enumeration</h3>
-        <p><strong>Problem Statement:</strong> Identified unsecured SMB shares that allowed anonymous access to sensitive files.</p>
-        <p><strong>Approach:</strong> Used Nmap to scan for open SMB services, enumerated shares with smbclient, and accessed publicly available files to retrieve a flag.</p>
-        <p><strong>Tools Used:</strong> Nmap, smbclient</p>
-        <p><strong>Key Lessons:</strong></p>
-        <ul>
-          <li>Risks of leaving SMB shares open to anonymous users</li>
-          <li>Proper access controls for network shares</li>
-          <li>Need for regular service audits</li>
-        </ul>
-      </article>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="labs.html" class="active">Lab Challenges</a>
+    <a href="contacts.html">Get in Touch</a>
+  </nav>
+</header>
 
-      <article class="challenge">
-        <h3>PCAP File Analysis</h3>
-        <p><strong>Problem Statement:</strong> Traffic capture revealed sensitive data transmitted in plaintext over HTTP.</p>
-        <p><strong>Approach:</strong> Loaded PCAP file in Wireshark, followed HTTP streams to recover directory paths and files, and extracted flag information directly from the capture.</p>
-        <p><strong>Tools Used:</strong> Wireshark, Tshark</p>
-        <p><strong>Key Lessons:</strong></p>
-        <ul>
-          <li>Dangers of transmitting data without encryption</li>
-          <li>How to analyze and reconstruct data from packet captures</li>
-          <li>Need to enforce HTTPS and secure transport protocols</li>
-        </ul>
-      </article>
+<main>
+  <h2>Cybersecurity Lab Portfolio</h2>
+  <p class="intro">
+    Hands-on security investigations and offensive/defensive labs demonstrating practical skills 
+    in web security, network analysis, exploitation, and incident response.
+  </p>
 
-      <article class="challenge">
-        <h3>Brute Force & Password Cracking</h3>
-        <p><strong>Problem Statement:</strong> Faced a weakly protected login portal requiring password discovery.</p>
-        <p><strong>Approach:</strong> Captured login requests, then used Hydra and JohnTheRipper to brute force weak credentials.</p>
-        <p><strong>Tools Used:</strong> Hydra, JohnTheRipper, Burp Suite</p>
-        <p><strong>Key Lessons:</strong></p>
-        <ul>
-          <li>Risks of weak password policies</li>
-          <li>Rate limiting and lockout mechanisms</li>
-          <li>Strong password management strategies</li>
-        </ul>
-      </article>
+  <div class="challenge-container">
 
-      <article class="challenge">
-        <h3>Leviathan CTF (Capture The Flag)</h3>
-        <p><strong>Problem Statement:</strong> Participated in the Leviathan CTF game focusing on web, crypto, and forensics challenges to capture flags and score points.</p>
-        <p><strong>Approach:</strong> Solved progressive tasks across categories — started with reconnaissance, moved to exploit development, and finished with forensic artifact recovery. Documented each flag and reproduction steps.</p>
-        <p><strong>Tools Used:</strong> Burp Suite, Ghidra, binwalk, strings, Python (for automation), Volatility</p>
-        <p><strong>Key Lessons:</strong></p>
-        <ul>
-          <li>Combining multiple security disciplines to solve complex CTF tasks</li>
-          <li>Systematic recon and note-taking speeds up teamwork</li>
-          <li>How to safely extract and validate forensic artifacts</li>
-        </ul>
-      </article>
+    <article class="challenge">
+      <h3>Web Application SQL Injection</h3>
+      <p><strong>Overview:</strong> Exploited a vulnerable login form to bypass authentication and extract database records.</p>
+      <p><strong>Execution:</strong> Identified injection points manually, automated data extraction using SQLmap, cracked password hashes, and accessed restricted resources.</p>
+      <p><strong>Tools:</strong> Burp Suite, SQLmap, JohnTheRipper</p>
+      <ul>
+        <li>Parameterized query importance</li>
+        <li>Authentication bypass techniques</li>
+        <li>Secure coding mitigation strategies</li>
+      </ul>
+    </article>
 
-      <article class="challenge">
-        <h3>Bandit Wargame (OverTheWire)</h3>
-        <p><strong>Problem Statement:</strong> Completed levels from the Bandit wargame to build practical Linux command-line and file-forensics skills.</p>
-        <p><strong>Approach:</strong> Progressed through successive SSH levels on the Bandit server, using command-line tools to read files, decode encodings, navigate directories with non-standard permissions, and extract hidden data.</p>
-        <p><strong>Tools Used:</strong> SSH, bash utilities (cat, ls, find), strings, hexdump, base64, tar, gzip, grep</p>
-        <p><strong>Key Lessons:</strong></p>
-        <ul>
-          <li>Proficiency with Linux shell commands and file permissions</li>
-          <li>Techniques for decoding and extracting data from various encodings and archives</li>
-          <li>Importance of methodical problem solving and documenting commands used per level</li>
-        </ul>
-      </article>
-    </div>
-  </main>
-  
-  <footer class="site-footer">
-    <p>&copy; 2025 Angela Wafula. All rights reserved.</p>
-  </footer>
+    <article class="challenge">
+      <h3>Directory & Web Enumeration</h3>
+      <p><strong>Overview:</strong> Discovered exposed directories due to improper web server configuration.</p>
+      <p><strong>Execution:</strong> Conducted directory brute-forcing and manual enumeration to uncover hidden files.</p>
+      <p><strong>Tools:</strong> Gobuster, Dirb</p>
+      <ul>
+        <li>Risks of directory indexing</li>
+        <li>Web server hardening practices</li>
+        <li>Reconnaissance methodology</li>
+      </ul>
+    </article>
+
+    <article class="challenge">
+      <h3>SMB Share Enumeration</h3>
+      <p><strong>Overview:</strong> Identified unsecured SMB shares allowing anonymous access.</p>
+      <p><strong>Execution:</strong> Scanned services, enumerated shares, and accessed exposed internal files.</p>
+      <p><strong>Tools:</strong> Nmap, smbclient</p>
+      <ul>
+        <li>Network exposure risks</li>
+        <li>Access control best practices</li>
+        <li>Service auditing importance</li>
+      </ul>
+    </article>
+
+    <article class="challenge">
+      <h3>Network Traffic Analysis (PCAP)</h3>
+      <p><strong>Overview:</strong> Investigated packet captures to identify sensitive plaintext transmissions.</p>
+      <p><strong>Execution:</strong> Reconstructed HTTP sessions and extracted credentials from unencrypted traffic.</p>
+      <p><strong>Tools:</strong> Wireshark, Tshark</p>
+      <ul>
+        <li>Plaintext credential risks</li>
+        <li>Packet stream reconstruction</li>
+        <li>Importance of HTTPS enforcement</li>
+      </ul>
+    </article>
+
+    <article class="challenge">
+      <h3>Password Cracking & Brute Force Testing</h3>
+      <p><strong>Overview:</strong> Tested authentication resilience against brute-force attacks.</p>
+      <p><strong>Execution:</strong> Captured login requests and cracked weak credentials to demonstrate risk exposure.</p>
+      <p><strong>Tools:</strong> Hydra, JohnTheRipper</p>
+      <ul>
+        <li>Password policy weaknesses</li>
+        <li>Rate-limiting controls</li>
+        <li>Secure hash implementation</li>
+      </ul>
+    </article>
+
+    <article class="challenge">
+      <h3>Incident Response – H4cked (TryHackMe)</h3>
+      <p><strong>Overview:</strong> Investigated a compromised Linux machine to determine attack vector and attacker activity.</p>
+      <p><strong>Execution:</strong> Analyzed authentication logs, bash history, and system artifacts to reconstruct the attack timeline and identify unauthorized SSH access.</p>
+      <p><strong>Tools:</strong> Linux CLI, Log Analysis Techniques</p>
+      <ul>
+        <li>Detection of brute-force indicators</li>
+        <li>Analysis of /var/log/auth.log</li>
+        <li>Attack timeline reconstruction</li>
+        <li>Incident response documentation</li>
+      </ul>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Angela Wafula | Cybersecurity Portfolio
+</footer>
+
 </body>
 </html>
-
