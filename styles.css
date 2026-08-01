@@ -6,15 +6,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: radial-gradient(circle at top, #0f172a 0%, #020617 100%);
+  background: linear-gradient(135deg, #0d1321 0%, #1b2735 50%, #0a0e14 100%);
   color: #e2e8f0;
   line-height: 1.6;
   min-height: 100vh;
 }
-
 /* ===============================
    2. NAVBAR
 ================================ */
@@ -27,24 +25,20 @@ body {
   padding: 1.2rem 5%;
   border-bottom: 1px solid #1e293b;
 }
-
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
   color: #38bdf8;
 }
-
 .nav-links a {
   color: #cbd5e1;
   text-decoration: none;
   margin-left: 1.5rem;
   transition: 0.3s;
 }
-
 .nav-links a:hover {
   color: #38bdf8;
 }
-
 /* ===============================
    3. THE GRID LAYOUT (The Main Fix)
 ================================ */
@@ -58,14 +52,12 @@ body {
   margin: 40px auto;
   align-items: start;
 }
-
 /* LEFT COLUMN (Sidebar) */
 .left-column {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
 }
-
 /* RIGHT COLUMN (About Me) */
 .about-text {
   background: #0f172a;
@@ -74,18 +66,16 @@ body {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-
 /* ===============================
    4. CARD STYLING
 ================================ */
-.profile-card, .certifications-card {
+.profile-card {
   background: #0f172a;
   border: 1px solid #1e293b;
   padding: 25px;
   border-radius: 12px;
   text-align: center;
 }
-
 .profile-pic {
   width: 130px;
   height: 130px;
@@ -94,19 +84,16 @@ body {
   object-fit: cover;
   margin-bottom: 15px;
 }
-
 .tagline {
   color: #94a3b8;
   font-size: 0.9rem;
   margin-bottom: 15px;
   font-style: italic;
 }
-
 h2 { color: #38bdf8; margin-bottom: 15px; }
 h3 { color: #7dd3fc; margin-top: 25px; margin-bottom: 10px; }
 ul { padding-left: 20px; text-align: left; }
 li { margin-bottom: 8px; font-size: 0.95rem; }
-
 /* ===============================
    5. RESPONSIVENESS (Mobile)
 ================================ */
@@ -122,7 +109,6 @@ li { margin-bottom: 8px; font-size: 0.95rem; }
     max-width: 500px;
   }
 }
-
 footer {
   text-align: center;
   padding: 2rem;
